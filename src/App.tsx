@@ -4,17 +4,25 @@ import styled from "styled-components";
 function App() {
   return (
     <Wrapper>
-      <header>
-        <p>Edit and save to reload.</p>
-        <div className="hexagon">
-          <div className="first-icon">Ikona</div>
-        </div>
-      </header>
+      <div className="hexagon">
+        <div className="first-icon">Ikona</div>
+      </div>
+      <div className="hexagon hexagon-second">
+        <div className="second-icon">Ikona dva</div>
+      </div>
+      <div className="hexagon hexagon-third">
+        <div className="third-icon">Ikona tri</div>
+      </div>
     </Wrapper>
   );
 }
 const Wrapper = styled.div`
   font-family: "Regular";
+  position: absolute;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .hexagon {
     position: relative;
     cursor: pointer;
@@ -27,6 +35,13 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 30vw;
+  }
+  .hexagon-second {
+    margin-left: 6rem;
+  }
+  .hexagon-third {
+    margin-left: 6rem;
   }
   .hexagon:before,
   .hexagon:after {
@@ -48,6 +63,14 @@ const Wrapper = styled.div`
     transform: rotate(-60deg);
   }
   .first-icon {
+    position: absolute;
+    z-index: 1;
+  }
+  .second-icon {
+    position: absolute;
+    z-index: 1;
+  }
+  .third-icon {
     position: absolute;
     z-index: 1;
   }
