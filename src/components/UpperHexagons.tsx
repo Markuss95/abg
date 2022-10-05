@@ -23,12 +23,13 @@ const UpperHexagons = () => {
 const Wrapper = styled.div`
   font-family: "Regular";
   position: absolute;
-  min-height: 100vh;
+  min-height: 73vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   width: 67%;
+  padding-bottom: 27vh;
   .first-container {
     margin-left: 2rem;
   }
@@ -83,8 +84,10 @@ const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     margin: auto;
+    min-height: 100vh;
     width: 60%;
     margin-left: 10%;
+    padding-bottom: 0;
     .first-container {
       margin-left: 0rem;
     }
