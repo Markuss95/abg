@@ -94,12 +94,6 @@ const Wrapper = styled.div`
     }
   }
   @media only screen and (max-width: 642px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-    width: 60%;
     .first-container {
       margin-left: 0rem;
     }
