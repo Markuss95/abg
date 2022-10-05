@@ -99,7 +99,7 @@ const Wrapper = styled.div`
     }
     .hexagon {
       margin-bottom: 1rem;
-      margin-left: 10rem;
+      margin-left: 6rem;
     }
   }
 `;
