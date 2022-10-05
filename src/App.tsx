@@ -4,14 +4,20 @@ import styled from "styled-components";
 function App() {
   return (
     <Wrapper>
-      <div className="hexagon">
-        <div className="first-icon">Ikona</div>
+      <div className="first-container">
+        <div className="hexagon">
+          <div className="text-inside">Ikona</div>
+        </div>
       </div>
-      <div className="hexagon hexagon-second">
-        <div className="second-icon">Ikona dva</div>
+      <div>
+        <div className="hexagon hexagon-second">
+          <div className="text-inside">Ikona dva</div>
+        </div>
       </div>
-      <div className="hexagon hexagon-third">
-        <div className="third-icon">Ikona tri</div>
+      <div>
+        <div className="hexagon hexagon-third">
+          <div className="text-inside">Ikona tri</div>
+        </div>
       </div>
     </Wrapper>
   );
@@ -23,14 +29,17 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  .first-container {
+    margin-left: 2rem;
+  }
   .hexagon {
     position: relative;
     cursor: pointer;
-    margin: 1em auto;
+    margin-left: 6em;
     width: 7em;
     height: 11.5em;
     border-radius: 1em/0.5em;
-    background: #708090;
+    background: #696969;
     transition: opacity 0.5s;
     display: flex;
     justify-content: center;
@@ -62,17 +71,42 @@ const Wrapper = styled.div`
     -webkit-transform: rotate(-60deg);
     transform: rotate(-60deg);
   }
-  .first-icon {
+  .text-inside {
+    color: white;
     position: absolute;
     z-index: 1;
   }
-  .second-icon {
-    position: absolute;
-    z-index: 1;
+
+  @media only screen and (max-width: 942px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    margin-left: 10%;
+    .first-container {
+      margin-left: 0rem;
+    }
+    .hexagon {
+      margin-bottom: 1rem;
+      margin-left: 10rem;
+    }
   }
-  .third-icon {
-    position: absolute;
-    z-index: 1;
+  @media only screen and (max-width: 642px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    .first-container {
+      margin-left: 0rem;
+    }
+    .hexagon {
+      margin-bottom: 1rem;
+      margin-left: 10rem;
+    }
   }
 `;
 export default App;
