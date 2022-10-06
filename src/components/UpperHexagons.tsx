@@ -21,6 +21,7 @@ const pageContentVisible = {
 const UpperHexagons = () => {
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
+      <img src={logo} alt="Logo" className="logo" />;
       <div className="container">
         <div className=" scale">
           <div className="hexagon">
@@ -72,7 +73,7 @@ const Wrapper = styled(motion.div)`
     width: 7em;
     height: 11.5em;
     border-radius: 1em/0.5em;
-    background: #696969;
+    background: #5d6472;
     transition: opacity 0.5s;
     display: flex;
     justify-content: center;
@@ -107,6 +108,14 @@ const Wrapper = styled(motion.div)`
     -webkit-transform: rotate(-60deg);
     transform: rotate(-60deg);
   }
+  .logo {
+    position: absolute;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    cursor: pointer;
+  }
   .text-inside {
     color: white;
     position: absolute;
@@ -114,15 +123,20 @@ const Wrapper = styled(motion.div)`
   }
 
   @media only screen and (max-width: 942px) {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-    width: 60%;
-    margin-left: 10%;
-    padding-bottom: 0;
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto;
+      width: 60%;
+      margin-left: 10%;
+      padding-bottom: 0;
+    }
+    .logo {
+      display: none;
+    }
     .first-container {
       margin-left: 0rem;
     }
