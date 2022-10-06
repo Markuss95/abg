@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import logo from "../assets/abg_test.png";
 
 const pageContentVisible = {
   hidden: {
@@ -47,6 +48,7 @@ const UpperHexagons = () => {
 };
 const Wrapper = styled(motion.div)`
   position: relative;
+
   .container {
     min-height: 100vh;
     position: relative;
