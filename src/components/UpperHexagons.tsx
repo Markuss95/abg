@@ -17,6 +17,11 @@ const UpperHexagons = () => {
           <div className="text-inside">Ikona tri</div>
         </div>
       </div>
+      <div>
+        <div className="hexagon hexagon-forth">
+          <div className="text-inside">Ikona cetri</div>
+        </div>
+      </div>
     </Wrapper>
   );
 };
@@ -50,6 +55,9 @@ const Wrapper = styled.div`
     margin-left: 6rem;
   }
   .hexagon-third {
+    margin-left: 6rem;
+  }
+  .hexagon-forth {
     margin-left: 6rem;
   }
   .hexagon:before,
@@ -90,6 +98,7 @@ const Wrapper = styled.div`
     }
     .hexagon {
       margin-bottom: 1rem;
+      margin-top: 1rem;
       margin-left: 10rem;
     }
   }
