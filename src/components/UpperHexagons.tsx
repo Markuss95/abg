@@ -20,42 +20,43 @@ const pageContentVisible = {
 const UpperHexagons = () => {
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
-      <div className=" scale">
-        <div className="hexagon">
-          <div className="text-inside">Ikona</div>
+      <div className="container">
+        <div className=" scale">
+          <div className="hexagon">
+            <div className="text-inside">Početna</div>
+          </div>
         </div>
-      </div>
-      <div className="scale">
-        <div className="hexagon hexagon-second">
-          <div className="text-inside">Ikona dva</div>
+        <div className="scale">
+          <div className="hexagon hexagon-second">
+            <div className="text-inside">O nama</div>
+          </div>
         </div>
-      </div>
-      <div className="scale">
-        <div className="hexagon hexagon-third">
-          <div className="text-inside">Ikona tri</div>
+        <div className="scale">
+          <div className="hexagon hexagon-third">
+            <div className="text-inside">Usluge</div>
+          </div>
         </div>
-      </div>
-      <div className="scale">
-        <div className="hexagon hexagon-forth">
-          <div className="text-inside">Ikona cetri</div>
+        <div className="scale">
+          <div className="hexagon hexagon-forth">
+            <div className="text-inside">Kontakt</div>
+          </div>
         </div>
       </div>
     </Wrapper>
   );
 };
 const Wrapper = styled(motion.div)`
-  position: absolute;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 67%;
-  margin-left: 13.1vw;
-  /* padding-bottom: 27vh; */
-  /* .first-container {
-    margin-left: 2rem !important;
-  } */
+  position: relative;
+  .container {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 67%;
+    margin-left: 13.1vw;
+  }
   .scale {
     transition-duration: 0.5s;
   }
