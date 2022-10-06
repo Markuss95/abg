@@ -1,16 +1,16 @@
 import "./App.css";
-import styled from "styled-components";
+import { AnimatePresence } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="" element={<LandingPage />} />
-    </Routes>
+    <AnimatePresence>
+      <Routes>
+        <Route path="" element={<LandingPage />} />
+      </Routes>
+    </AnimatePresence>
   );
 };
-
-const Wrapper = styled.div``;
 
 export default App;
