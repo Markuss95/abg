@@ -1,9 +1,24 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+const pageContentVisible = {
+  hidden: {
+    opacity: 0,
+    x: "100vh",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "tween",
+      delay: 0.5,
+    },
+  },
+};
+
 const UpperHexagons = () => {
   return (
-    <Wrapper>
+    <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
       <div className="first-container">
         <div className="hexagon">
           <div className="text-inside">Ikona</div>
