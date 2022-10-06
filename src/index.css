@@ -1,6 +1,22 @@
+@font-face {
+  font-family: "Regular"; /*Can be any text*/
+  src: local("LibreBaskerville"),
+    url("./fonts/LibreBaskerville-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold"; /*Can be any text*/
+  src: local("LibreBaskerville"),
+    url("./fonts/LibreBaskerville-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Italic"; /*Can be any text*/
+  src: local("LibreBaskerville"),
+    url("./fonts/LibreBaskerville-Italic.ttf") format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Regular", serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;

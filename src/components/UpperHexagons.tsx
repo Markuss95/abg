@@ -10,20 +10,28 @@ const pageContentVisible = {
     opacity: 1,
     x: 0,
     transition: {
-      type: "tween",
+      type: "spring",
+      stiffnes: 150,
       delay: 0.5,
     },
   },
 };
 
+const hexagonVariants = {
+  hidden: {
+    opacity: 1,
+  },
+  visible: {},
+};
+
 const UpperHexagons = () => {
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
-      <div className="first-container">
+      <motion.div className="first-container">
         <div className="hexagon">
           <div className="text-inside">Ikona</div>
         </div>
-      </div>
+      </motion.div>
       <div>
         <div className="hexagon hexagon-second">
           <div className="text-inside">Ikona dva</div>
@@ -43,7 +51,6 @@ const UpperHexagons = () => {
   );
 };
 const Wrapper = styled(motion.div)`
-  font-family: "Regular";
   position: absolute;
   min-height: 100vh;
   display: flex;
