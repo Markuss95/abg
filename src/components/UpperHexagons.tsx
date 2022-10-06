@@ -17,32 +17,25 @@ const pageContentVisible = {
   },
 };
 
-const hexagonVariants = {
-  hidden: {
-    opacity: 1,
-  },
-  visible: {},
-};
-
 const UpperHexagons = () => {
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
-      <motion.div className="first-container">
+      <div className=" scale">
         <div className="hexagon">
           <div className="text-inside">Ikona</div>
         </div>
-      </motion.div>
-      <div>
+      </div>
+      <div className="scale">
         <div className="hexagon hexagon-second">
           <div className="text-inside">Ikona dva</div>
         </div>
       </div>
-      <div>
+      <div className="scale">
         <div className="hexagon hexagon-third">
           <div className="text-inside">Ikona tri</div>
         </div>
       </div>
-      <div>
+      <div className="scale">
         <div className="hexagon hexagon-forth">
           <div className="text-inside">Ikona cetri</div>
         </div>
@@ -58,9 +51,16 @@ const Wrapper = styled(motion.div)`
   align-items: center;
   margin: auto;
   width: 67%;
+  margin-left: 13.1vw;
   /* padding-bottom: 27vh; */
-  .first-container {
-    margin-left: 2rem;
+  /* .first-container {
+    margin-left: 2rem !important;
+  } */
+  .scale {
+    transition-duration: 0.5s;
+  }
+  .scale:hover {
+    scale: 1.2;
   }
   .hexagon {
     position: relative;
@@ -74,7 +74,7 @@ const Wrapper = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30vw;
+    /* margin-left: 30vw; */
   }
   .hexagon-second {
     margin-left: 6rem;
