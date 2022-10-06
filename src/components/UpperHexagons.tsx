@@ -61,7 +61,7 @@ const Wrapper = styled(motion.div)`
     margin-left: 13.1vw;
   }
   .scale {
-    transition-duration: 0.5s;
+    transition-duration: 0.25s;
   }
   .scale:hover {
     scale: 1.2;
