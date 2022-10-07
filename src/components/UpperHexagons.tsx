@@ -59,9 +59,10 @@ const Wrapper = styled(motion.div)`
     margin: auto;
     width: 67%;
     margin-left: 13.1vw;
+    padding-top: 3rem;
   }
   .scale {
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     transition-duration: 0.25s;
   }
   .scale:hover {
@@ -136,6 +137,9 @@ const Wrapper = styled(motion.div)`
       width: 60%;
       margin-left: 10%;
       padding-bottom: 0;
+    }
+    .scale {
+      padding-top: 0;
     }
     .logo {
       max-height: 180px;
