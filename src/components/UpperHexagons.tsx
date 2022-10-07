@@ -51,7 +51,7 @@ const Wrapper = styled(motion.div)`
   position: relative;
 
   .container {
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -61,6 +61,7 @@ const Wrapper = styled(motion.div)`
     margin-left: 13.1vw;
   }
   .scale {
+    padding-top: 3rem;
     transition-duration: 0.25s;
   }
   .scale:hover {
@@ -110,6 +111,8 @@ const Wrapper = styled(motion.div)`
   }
   .logo {
     position: absolute;
+    padding-left: 2rem;
+    padding-top: 2rem;
     height: auto;
     width: auto;
     max-width: 300px;
@@ -124,7 +127,7 @@ const Wrapper = styled(motion.div)`
 
   @media only screen and (max-width: 942px) {
     .container {
-      min-height: 100vh;
+      /* min-height: 80; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -135,7 +138,8 @@ const Wrapper = styled(motion.div)`
       padding-bottom: 0;
     }
     .logo {
-      display: none;
+      max-height: 180px;
+      max-width: 180px;
     }
     .first-container {
       margin-left: 0rem;
@@ -149,6 +153,9 @@ const Wrapper = styled(motion.div)`
   @media only screen and (max-width: 642px) {
     .first-container {
       margin-left: 0rem;
+    }
+    .logo {
+      display: none;
     }
     .hexagon {
       margin-bottom: 1rem;
