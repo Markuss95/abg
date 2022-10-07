@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/abg_test.png";
 
 const pageContentVisible = {
@@ -25,6 +27,7 @@ const UpperHexagons = () => {
       <div className="container">
         <div className=" scale">
           <div className="hexagon">
+            <FontAwesomeIcon icon={faHouse} className="faicon" />
             <p className="text-inside">Početna</p>
           </div>
         </div>
@@ -61,6 +64,12 @@ const Wrapper = styled(motion.div)`
     margin-left: 13.1vw;
     padding-top: 3rem;
   }
+  .faicon {
+    z-index: 100;
+    padding-bottom: 5rem;
+    font-size: 1.7rem;
+  }
+
   .scale {
     /* padding-top: 3rem; */
     transition-duration: 0.25s;
@@ -110,6 +119,13 @@ const Wrapper = styled(motion.div)`
     -webkit-transform: rotate(-60deg);
     transform: rotate(-60deg);
   }
+
+  .hexagon:hover > .faicon {
+    color: white;
+  }
+  .hexagon:hover > .text-inside {
+    color: white;
+  }
   .logo {
     position: absolute;
     padding-left: 2rem;
@@ -121,7 +137,7 @@ const Wrapper = styled(motion.div)`
     cursor: pointer;
   }
   .text-inside {
-    color: white;
+    color: #ababab;
     position: absolute;
     z-index: 1;
   }
