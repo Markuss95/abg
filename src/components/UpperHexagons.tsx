@@ -25,22 +25,22 @@ const UpperHexagons = () => {
       <div className="container">
         <div className=" scale">
           <div className="hexagon">
-            <div className="text-inside">Početna</div>
+            <p className="text-inside">Početna</p>
           </div>
         </div>
         <div className="scale">
           <div className="hexagon hexagon-second">
-            <div className="text-inside">O nama</div>
+            <p className="text-inside">O nama</p>
           </div>
         </div>
         <div className="scale">
           <div className="hexagon hexagon-third">
-            <div className="text-inside">Usluge</div>
+            <p className="text-inside">Usluge</p>
           </div>
         </div>
         <div className="scale">
           <div className="hexagon hexagon-forth">
-            <div className="text-inside">Kontakt</div>
+            <p className="text-inside">Kontakt</p>
           </div>
         </div>
       </div>
