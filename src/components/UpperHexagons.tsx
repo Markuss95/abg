@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouse,
+  faCircleInfo,
+  faHand,
+  faAddressBook,
+} from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/abg_test.png";
 
 const pageContentVisible = {
@@ -33,16 +38,19 @@ const UpperHexagons = () => {
         </div>
         <div className="scale">
           <div className="hexagon hexagon-second">
+            <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
             <p className="text-inside">O nama</p>
           </div>
         </div>
         <div className="scale">
           <div className="hexagon hexagon-third">
+            <FontAwesomeIcon icon={faHand} className="faicon" />
             <p className="text-inside">Usluge</p>
           </div>
         </div>
         <div className="scale">
           <div className="hexagon hexagon-forth">
+            <FontAwesomeIcon icon={faAddressBook} className="faicon" />
             <p className="text-inside">Kontakt</p>
           </div>
         </div>
