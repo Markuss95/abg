@@ -44,7 +44,7 @@ const UpperHexagons = () => {
         </div>
         <div className="scale">
           <div className="hexagon hexagon-third">
-            <FontAwesomeIcon icon={faHand} className="faicon" />
+            <FontAwesomeIcon icon={faHand} className="faicon " />
             <p className="text-inside">Usluge</p>
           </div>
         </div>
