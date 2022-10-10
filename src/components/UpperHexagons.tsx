@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -28,12 +29,14 @@ const UpperHexagons = () => {
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
       <div className="container">
-        <div className=" scale">
-          <div className="hexagon">
-            <FontAwesomeIcon icon={faHouse} className="faicon" />
-            <p className="text-inside">Početna</p>
+        <Link to="/home">
+          <div className=" scale">
+            <div className="hexagon">
+              <FontAwesomeIcon icon={faHouse} className="faicon" />
+              <p className="text-inside">Početna</p>
+            </div>
           </div>
-        </div>
+        </Link>
         <div className="scale">
           <div className="hexagon hexagon-second">
             <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
@@ -74,6 +77,7 @@ const Wrapper = styled(motion.div)`
     z-index: 100;
     padding-bottom: 5rem;
     font-size: 1.7rem;
+    color: #ababab;
   }
 
   .scale {

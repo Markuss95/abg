@@ -12,7 +12,7 @@ const App = () => {
       <AnimatePresence>
         <Routes>
           <Route path="" element={<LandingPage />} />
-          <Route path="" element={<HomePage />} />
+          <Route path="home" element={<HomePage />} />
         </Routes>
       </AnimatePresence>
     </>
