@@ -7,7 +7,6 @@ import {
   faHand,
   faAddressBook,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/abg_test.png";
 
 const pageContentVisible = {
   hidden: {
@@ -28,7 +27,6 @@ const pageContentVisible = {
 const UpperHexagons = () => {
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
-      <img src={logo} alt="Logo" className="logo" />;
       <div className="container">
         <div className=" scale">
           <div className="hexagon">
@@ -134,17 +132,7 @@ const Wrapper = styled(motion.div)`
   .hexagon:hover > .text-inside {
     color: white;
   }
-  .logo {
-    cursor: pointer;
-    position: absolute;
-    left: 2rem;
-    padding-top: 2rem;
-    height: auto;
-    width: auto;
-    max-width: 300px;
-    max-height: 300px;
-    z-index: 100;
-  }
+
   .text-inside {
     color: #ababab;
     position: absolute;

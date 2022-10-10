@@ -2,14 +2,20 @@ import "./App.css";
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
+import HomePage from "./pages/HomePage";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <AnimatePresence>
-      <Routes>
-        <Route path="" element={<LandingPage />} />
-      </Routes>
-    </AnimatePresence>
+    <>
+      <Navbar />
+      <AnimatePresence>
+        <Routes>
+          <Route path="" element={<LandingPage />} />
+          <Route path="" element={<HomePage />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 };
 
