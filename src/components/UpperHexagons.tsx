@@ -135,14 +135,15 @@ const Wrapper = styled(motion.div)`
     color: white;
   }
   .logo {
+    cursor: pointer;
     position: absolute;
-    padding-left: 2rem;
+    left: 2rem;
     padding-top: 2rem;
     height: auto;
     width: auto;
     max-width: 300px;
     max-height: 300px;
-    cursor: pointer;
+    z-index: 100;
   }
   .text-inside {
     color: #ababab;
