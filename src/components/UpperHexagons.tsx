@@ -53,6 +53,7 @@ const UpperHexagons = () => {
   const [isHoveredTwo, setIsHoveredTwo] = useState(false);
   const [isHoveredThree, setIsHoveredThree] = useState(false);
   const [isHoveredFour, setIsHoveredFour] = useState(false);
+
   function handleMouseEnterOne() {
     setIsHoveredOne(true);
   }
