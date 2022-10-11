@@ -49,13 +49,33 @@ const textVariantsRight = {
 };
 
 const UpperHexagons = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  function handleMouseEnter() {
-    setIsHovered(true);
+  const [isHoveredOne, setIsHoveredOne] = useState(false);
+  const [isHoveredTwo, setIsHoveredTwo] = useState(false);
+  const [isHoveredThree, setIsHoveredThree] = useState(false);
+  const [isHoveredFour, setIsHoveredFour] = useState(false);
+  function handleMouseEnterOne() {
+    setIsHoveredOne(true);
   }
-
-  function handleMouseLeave() {
-    setIsHovered(false);
+  function handleMouseLeaveOne() {
+    setIsHoveredOne(false);
+  }
+  function handleMouseEnterTwo() {
+    setIsHoveredTwo(true);
+  }
+  function handleMouseLeaveTwo() {
+    setIsHoveredTwo(false);
+  }
+  function handleMouseEnterThree() {
+    setIsHoveredThree(true);
+  }
+  function handleMouseLeaveThree() {
+    setIsHoveredThree(false);
+  }
+  function handleMouseEnterFour() {
+    setIsHoveredFour(true);
+  }
+  function handleMouseLeaveFour() {
+    setIsHoveredFour(false);
   }
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
@@ -63,21 +83,21 @@ const UpperHexagons = () => {
         <Link to="/home">
           <div
             className=" scale"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleMouseEnterOne}
+            onMouseLeave={handleMouseLeaveOne}
           >
             <div className="hexagon">
               <FontAwesomeIcon icon={faHouse} className="faicon" />
               <div className="text-inside">
                 <motion.p
                   variants={textVariantsLeft}
-                  animate={isHovered ? "hover" : "initial"}
+                  animate={isHoveredOne ? "hover" : "initial"}
                 >
                   Poč
                 </motion.p>
                 <motion.p
                   variants={textVariantsRight}
-                  animate={isHovered ? "hover" : "initial"}
+                  animate={isHoveredOne ? "hover" : "initial"}
                 >
                   etna
                 </motion.p>
@@ -85,36 +105,74 @@ const UpperHexagons = () => {
             </div>
           </div>
         </Link>
-        <div className="scale">
+        <div
+          className="scale"
+          onMouseEnter={handleMouseEnterTwo}
+          onMouseLeave={handleMouseLeaveTwo}
+        >
           <div className="hexagon hexagon-second">
             <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
             <div className="text-inside">
               <motion.p
                 variants={textVariantsLeft}
-                animate={isHovered ? "hover" : "initial"}
+                animate={isHoveredTwo ? "hover" : "initial"}
                 className="about-us-txt"
               >
                 O{" "}
               </motion.p>
               <motion.p
                 variants={textVariantsRight}
-                animate={isHovered ? "hover" : "initial"}
+                animate={isHoveredTwo ? "hover" : "initial"}
               >
                 nama
               </motion.p>
             </div>
           </div>
         </div>
-        <div className="scale">
+        <div
+          className="scale"
+          onMouseEnter={handleMouseEnterThree}
+          onMouseLeave={handleMouseLeaveThree}
+        >
           <div className="hexagon hexagon-third">
             <FontAwesomeIcon icon={faHand} className="faicon " />
-            <p className="text-inside">Usluge</p>
+            <div className="text-inside">
+              <motion.p
+                variants={textVariantsLeft}
+                animate={isHoveredThree ? "hover" : "initial"}
+              >
+                Usl
+              </motion.p>
+              <motion.p
+                variants={textVariantsRight}
+                animate={isHoveredThree ? "hover" : "initial"}
+              >
+                uge
+              </motion.p>
+            </div>
           </div>
         </div>
-        <div className="scale">
+        <div
+          className="scale"
+          onMouseEnter={handleMouseEnterFour}
+          onMouseLeave={handleMouseLeaveFour}
+        >
           <div className="hexagon hexagon-forth">
             <FontAwesomeIcon icon={faAddressBook} className="faicon" />
-            <p className="text-inside">Kontakt</p>
+            <div className="text-inside">
+              <motion.p
+                variants={textVariantsLeft}
+                animate={isHoveredFour ? "hover" : "initial"}
+              >
+                Kont
+              </motion.p>
+              <motion.p
+                variants={textVariantsRight}
+                animate={isHoveredFour ? "hover" : "initial"}
+              >
+                akt
+              </motion.p>
+            </div>
           </div>
         </div>
       </div>
