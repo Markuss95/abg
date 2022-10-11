@@ -39,7 +39,7 @@ const Navbar = () => {
 const Wrapper = styled.div`
   .logo {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     left: 2rem;
     top: 2rem;
     height: auto;
