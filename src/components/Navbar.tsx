@@ -87,7 +87,7 @@ const Wrapper = styled.div`
     font-size: 2rem;
     border-radius: 0.4rem;
     bottom: 3%;
-    right: 3%;
+    right: 2%;
   }
   .hidden {
     display: none;

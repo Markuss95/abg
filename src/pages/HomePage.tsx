@@ -12,10 +12,14 @@ const HomePage = () => {
       </div>
       <div className="home-text">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-          molestiae possimus autem similique tempore vel nobis quia ducimus
-          earum in, aliquid, necessitatibus iste temporibus ad blanditiis?
-          Ratione esse quo mollitia! test te
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aperiam
+          tenetur, saepe distinctio quia repellat nesciunt ducimus ipsam?
+          Accusantium aperiam numquam, a ducimus hic ratione praesentium
+          dignissimos atque odit neque? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Nihil officia commodi consectetur atque minima
+          corporis enim voluptatem itaque laboriosam nemo! Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Impedit repellendus ipsam culpa
+          mollitia nam non error placeat quod natus eius?
         </p>
       </div>
     </Wrapper>
@@ -38,9 +42,15 @@ const Wrapper = styled.div`
   }
   .home-text {
     font-family: "Regular";
-
     color: white;
-    height: 20vh;
+
+    p {
+      margin-left: 4rem;
+      margin-right: 4rem;
+      text-align: left;
+      line-height: 3rem;
+      font-size: 1.6rem;
+    }
   }
 `;
 

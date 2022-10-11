@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,22 +26,83 @@ const pageContentVisible = {
   },
 };
 
+const textVariantsLeft = {
+  hover: {
+    x: [-50, 0],
+    scale: [1.1, 1],
+    duration: 5,
+  },
+  initial: {
+    x: 0,
+    scale: 1,
+  },
+};
+const textVariantsRight = {
+  hover: {
+    x: [50, 0],
+    scale: [1.1, 1],
+  },
+  initial: {
+    x: 0,
+    scale: 1,
+  },
+};
+
 const UpperHexagons = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+  }
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
       <div className="container">
         <Link to="/home">
-          <div className=" scale">
+          <div
+            className=" scale"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <div className="hexagon">
               <FontAwesomeIcon icon={faHouse} className="faicon" />
-              <p className="text-inside">Početna</p>
+              <div className="text-inside">
+                <motion.p
+                  variants={textVariantsLeft}
+                  animate={isHovered ? "hover" : "initial"}
+                >
+                  Poč
+                </motion.p>
+                <motion.p
+                  variants={textVariantsRight}
+                  animate={isHovered ? "hover" : "initial"}
+                >
+                  etna
+                </motion.p>
+              </div>
             </div>
           </div>
         </Link>
         <div className="scale">
           <div className="hexagon hexagon-second">
             <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
-            <p className="text-inside">O nama</p>
+            <div className="text-inside">
+              <motion.p
+                variants={textVariantsLeft}
+                animate={isHovered ? "hover" : "initial"}
+                className="about-us-txt"
+              >
+                O{" "}
+              </motion.p>
+              <motion.p
+                variants={textVariantsRight}
+                animate={isHovered ? "hover" : "initial"}
+              >
+                nama
+              </motion.p>
+            </div>
           </div>
         </div>
         <div className="scale">
@@ -62,6 +124,9 @@ const UpperHexagons = () => {
 const Wrapper = styled(motion.div)`
   position: relative;
 
+  .about-us-txt {
+    padding-right: 0.3rem;
+  }
   .container {
     min-height: 80vh;
     position: relative;
@@ -141,6 +206,9 @@ const Wrapper = styled(motion.div)`
     color: #ababab;
     position: absolute;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   @media only screen and (max-width: 942px) {
