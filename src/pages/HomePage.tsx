@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundPhoto from "../assets/abgsl1.jpg";
+import backgroundPhoto from "../assets/abgsl2.jpg";
 const HomePage = () => {
   return (
     <Wrapper>
