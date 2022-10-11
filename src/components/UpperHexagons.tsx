@@ -31,20 +31,24 @@ const textVariantsLeft = {
     x: [-50, 0],
     scale: [1.1, 1],
     duration: 5,
+    opacity: [0, 1],
   },
   initial: {
     x: 0,
     scale: 1,
+    opacity: 1,
   },
 };
 const textVariantsRight = {
   hover: {
     x: [50, 0],
     scale: [1.1, 1],
+    opacity: [0, 1],
   },
   initial: {
     x: 0,
     scale: 1,
+    opacity: 1,
   },
 };
 
