@@ -8,13 +8,14 @@ const Footer = () => {
         info@abgtest.hr
       </div>
       <div className="lower-footer-part">
-        ABG Test © 2022 Sva prava pridržana
+        ABG Test © {new Date().getFullYear()} Sva prava pridržana
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+  font-family: "Bold";
   position: absolute;
   width: 100%;
   background-color: white;

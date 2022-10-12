@@ -14,15 +14,13 @@ const HomePage = () => {
         </div>
         <div className="home-text">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aperiam
-            tenetur, saepe distinctio quia repellat nesciunt ducimus ipsam?
-            Accusantium aperiam numquam, a ducimus hic ratione praesentium
-            dignissimos atque odit neque? Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Nihil officia commodi consectetur
-            atque minima corporis enim voluptatem itaque laboriosam nemo! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            repellendus ipsam culpa mollitia nam non error placeat quod natus
-            eius?
+            ABG test d.o.o za tehničko ispitivanje i analizu osnovana je u
+            studenom 2017 g. Bavi se ispitivanjima u građevinarstvu i to
+            ispitivanjem asfalta, betona i geomehaničkim ispitivanjima. Sastoji
+            se od centralnog laboratorija smještenog u Drinskoj 123/a Osijek i
+            terenskog laboratorija za ispitivanje asfalta koji se nalazi u
+            Nemetinu (pored Osijeka). Djelatnici ABGtest-a su obučeni i stručni,
+            a ispitivanja provode umjerenom opremom.
           </p>
         </div>
       </Wrapper>
@@ -48,13 +46,14 @@ const Wrapper = styled.div`
   .home-text {
     font-family: "Regular";
     color: white;
-
+    margin-top: 5rem;
+    margin-bottom: 6rem;
     p {
       margin-left: 4rem;
       margin-right: 4rem;
       text-align: left;
       line-height: 3rem;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
   }
 `;
