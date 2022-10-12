@@ -88,6 +88,7 @@ const Wrapper = styled.div`
     border-radius: 0.4rem;
     bottom: 3%;
     right: 2%;
+    z-index: 101;
   }
   .hidden {
     display: none;
