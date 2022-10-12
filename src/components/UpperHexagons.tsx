@@ -28,7 +28,7 @@ const pageContentVisible = {
 
 const textVariantsLeft = {
   hover: {
-    x: [-50, 0],
+    x: [-10, 0],
     scale: [1.1, 1],
     duration: 5,
     opacity: [0, 1],
@@ -41,7 +41,7 @@ const textVariantsLeft = {
 };
 const textVariantsRight = {
   hover: {
-    x: [50, 0],
+    x: [10, 0],
     scale: [1.1, 1],
     opacity: [0, 1],
   },
