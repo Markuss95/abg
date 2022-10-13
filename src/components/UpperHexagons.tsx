@@ -13,15 +13,15 @@ import {
 const pageContentVisible = {
   hidden: {
     opacity: 0,
-    x: "100vh",
+    // x: "100vh",
   },
   visible: {
     opacity: 1,
-    x: 0,
+    // x: 0,
     transition: {
-      type: "spring",
-      stiffnes: 150,
-      delay: 0.5,
+      // type: "spring",
+      // stiffnes: 150,
+      duration: 2,
     },
   },
 };
@@ -53,56 +53,56 @@ const textVariantsRight = {
 };
 
 const UpperHexagons = () => {
-  const [isHoveredOne, setIsHoveredOne] = useState(false);
-  const [isHoveredTwo, setIsHoveredTwo] = useState(false);
-  const [isHoveredThree, setIsHoveredThree] = useState(false);
-  const [isHoveredFour, setIsHoveredFour] = useState(false);
+  // const [isHoveredOne, setIsHoveredOne] = useState(false);
+  // const [isHoveredTwo, setIsHoveredTwo] = useState(false);
+  // const [isHoveredThree, setIsHoveredThree] = useState(false);
+  // const [isHoveredFour, setIsHoveredFour] = useState(false);
 
-  function handleMouseEnterOne() {
-    setIsHoveredOne(true);
-  }
-  function handleMouseLeaveOne() {
-    setIsHoveredOne(false);
-  }
-  function handleMouseEnterTwo() {
-    setIsHoveredTwo(true);
-  }
-  function handleMouseLeaveTwo() {
-    setIsHoveredTwo(false);
-  }
-  function handleMouseEnterThree() {
-    setIsHoveredThree(true);
-  }
-  function handleMouseLeaveThree() {
-    setIsHoveredThree(false);
-  }
-  function handleMouseEnterFour() {
-    setIsHoveredFour(true);
-  }
-  function handleMouseLeaveFour() {
-    setIsHoveredFour(false);
-  }
+  // function handleMouseEnterOne() {
+  //   setIsHoveredOne(true);
+  // }
+  // function handleMouseLeaveOne() {
+  //   setIsHoveredOne(false);
+  // }
+  // function handleMouseEnterTwo() {
+  //   setIsHoveredTwo(true);
+  // }
+  // function handleMouseLeaveTwo() {
+  //   setIsHoveredTwo(false);
+  // }
+  // function handleMouseEnterThree() {
+  //   setIsHoveredThree(true);
+  // }
+  // function handleMouseLeaveThree() {
+  //   setIsHoveredThree(false);
+  // }
+  // function handleMouseEnterFour() {
+  //   setIsHoveredFour(true);
+  // }
+  // function handleMouseLeaveFour() {
+  //   setIsHoveredFour(false);
+  // }
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
       <div className="container">
         <Link to="/home">
           <div
             className=" scale"
-            onMouseEnter={handleMouseEnterOne}
-            onMouseLeave={handleMouseLeaveOne}
+            // onMouseEnter={handleMouseEnterOne}
+            // onMouseLeave={handleMouseLeaveOne}
           >
             <div className="hexagon">
               <FontAwesomeIcon icon={faHouse} className="faicon" />
               <div className="text-inside">
                 <motion.p
-                  variants={textVariantsLeft}
-                  animate={isHoveredOne ? "hover" : "initial"}
+                // variants={textVariantsLeft}
+                // animate={isHoveredOne ? "hover" : "initial"}
                 >
                   Poč
                 </motion.p>
                 <motion.p
-                  variants={textVariantsRight}
-                  animate={isHoveredOne ? "hover" : "initial"}
+                // variants={textVariantsRight}
+                // animate={isHoveredOne ? "hover" : "initial"}
                 >
                   etna
                 </motion.p>
@@ -112,45 +112,39 @@ const UpperHexagons = () => {
         </Link>
         <div
           className="scale"
-          onMouseEnter={handleMouseEnterTwo}
-          onMouseLeave={handleMouseLeaveTwo}
+          // onMouseEnter={handleMouseEnterTwo}
+          // onMouseLeave={handleMouseLeaveTwo}
         >
           <div className="hexagon hexagon-second">
             <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
             <div className="text-inside">
               <motion.p
                 variants={textVariantsLeft}
-                animate={isHoveredTwo ? "hover" : "initial"}
-                className="about-us-txt"
+                // animate={isHoveredTwo ? "hover" : "initial"}
+                // className="about-us-txt"
               >
-                O{" "}
-              </motion.p>
-              <motion.p
-                variants={textVariantsRight}
-                animate={isHoveredTwo ? "hover" : "initial"}
-              >
-                nama
+                O Nama
               </motion.p>
             </div>
           </div>
         </div>
         <div
           className="scale"
-          onMouseEnter={handleMouseEnterThree}
-          onMouseLeave={handleMouseLeaveThree}
+          // onMouseEnter={handleMouseEnterThree}
+          // onMouseLeave={handleMouseLeaveThree}
         >
           <div className="hexagon hexagon-third">
             <FontAwesomeIcon icon={faHand} className="faicon " />
             <div className="text-inside">
               <motion.p
-                variants={textVariantsLeft}
-                animate={isHoveredThree ? "hover" : "initial"}
+              // variants={textVariantsLeft}
+              // animate={isHoveredThree ? "hover" : "initial"}
               >
                 Usl
               </motion.p>
               <motion.p
-                variants={textVariantsRight}
-                animate={isHoveredThree ? "hover" : "initial"}
+              // variants={textVariantsRight}
+              // animate={isHoveredThree ? "hover" : "initial"}
               >
                 uge
               </motion.p>
@@ -159,21 +153,21 @@ const UpperHexagons = () => {
         </div>
         <div
           className="scale"
-          onMouseEnter={handleMouseEnterFour}
-          onMouseLeave={handleMouseLeaveFour}
+          // onMouseEnter={handleMouseEnterFour}
+          // onMouseLeave={handleMouseLeaveFour}
         >
           <div className="hexagon hexagon-forth">
             <FontAwesomeIcon icon={faAddressBook} className="faicon" />
             <div className="text-inside">
               <motion.p
                 variants={textVariantsLeft}
-                animate={isHoveredFour ? "hover" : "initial"}
+                // animate={isHoveredFour ? "hover" : "initial"}
               >
                 Kont
               </motion.p>
               <motion.p
                 variants={textVariantsRight}
-                animate={isHoveredFour ? "hover" : "initial"}
+                // animate={isHoveredFour ? "hover" : "initial"}
               >
                 akt
               </motion.p>

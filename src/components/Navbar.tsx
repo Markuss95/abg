@@ -1,10 +1,23 @@
 import styled from "styled-components";
 import logo from "../assets/abg_test.png";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import smallLogo from "../assets/logo_mobile.png";
 import { Link } from "react-router-dom";
+
+const logoVisible = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+    },
+  },
+};
 
 function getWindowSize() {
   const { innerWidth, innerHeight } = window;
@@ -43,9 +56,20 @@ const Navbar = () => {
     <Wrapper>
       <Link to="/">
         {windowSize.innerWidth > 900 ? (
-          <img src={logo} alt="Logo" className="logo" />
+          <motion.img
+            src={logo}
+            alt="Logo"
+            className="logo"
+            variants={logoVisible}
+            initial="hidden"
+            animate="visible"
+          />
         ) : (
-          <img src={smallLogo} alt="smallLogo" className="logo small-logo" />
+          <motion.img
+            src={smallLogo}
+            alt="smallLogo"
+            className="logo small-logo"
+          />
         )}
       </Link>
       <div
