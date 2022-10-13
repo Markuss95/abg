@@ -26,31 +26,31 @@ const pageContentVisible = {
   },
 };
 
-const textVariantsLeft = {
-  hover: {
-    x: [-10, 0],
-    scale: [1.1, 1],
-    duration: 5,
-    opacity: [0, 1],
-  },
-  initial: {
-    x: 0,
-    scale: 1,
-    opacity: 1,
-  },
-};
-const textVariantsRight = {
-  hover: {
-    x: [10, 0],
-    scale: [1.1, 1],
-    opacity: [0, 1],
-  },
-  initial: {
-    x: 0,
-    scale: 1,
-    opacity: 1,
-  },
-};
+// const textVariantsLeft = {
+//   hover: {
+//     x: [-10, 0],
+//     scale: [1.1, 1],
+//     duration: 5,
+//     opacity: [0, 1],
+//   },
+//   initial: {
+//     x: 0,
+//     scale: 1,
+//     opacity: 1,
+//   },
+// };
+// const textVariantsRight = {
+//   hover: {
+//     x: [10, 0],
+//     scale: [1.1, 1],
+//     opacity: [0, 1],
+//   },
+//   initial: {
+//     x: 0,
+//     scale: 1,
+//     opacity: 1,
+//   },
+// };
 
 const UpperHexagons = () => {
   // const [isHoveredOne, setIsHoveredOne] = useState(false);
@@ -119,9 +119,9 @@ const UpperHexagons = () => {
             <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
             <div className="text-inside">
               <motion.p
-                variants={textVariantsLeft}
-                // animate={isHoveredTwo ? "hover" : "initial"}
-                // className="about-us-txt"
+              // variants={textVariantsLeft}
+              // animate={isHoveredTwo ? "hover" : "initial"}
+              // className="about-us-txt"
               >
                 O Nama
               </motion.p>
@@ -160,14 +160,14 @@ const UpperHexagons = () => {
             <FontAwesomeIcon icon={faAddressBook} className="faicon" />
             <div className="text-inside">
               <motion.p
-                variants={textVariantsLeft}
-                // animate={isHoveredFour ? "hover" : "initial"}
+              // variants={textVariantsLeft}
+              // animate={isHoveredFour ? "hover" : "initial"}
               >
                 Kont
               </motion.p>
               <motion.p
-                variants={textVariantsRight}
-                // animate={isHoveredFour ? "hover" : "initial"}
+              // variants={textVariantsRight}
+              // animate={isHoveredFour ? "hover" : "initial"}
               >
                 akt
               </motion.p>
