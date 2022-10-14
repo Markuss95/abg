@@ -73,7 +73,7 @@ const Navbar = () => {
         {windowSize.innerWidth > 900 && (
           <motion.img src={logo} alt="Logo" className="logo" />
         )}
-        {windowSize.innerWidth < 901 && location.pathname != "/" && (
+        {windowSize.innerWidth < 901 && location.pathname !== "/" && (
           <motion.img
             src={smallLogo}
             alt="smallLogo"
