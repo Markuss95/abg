@@ -12,164 +12,53 @@ import {
 const pageContentVisible = {
   hidden: {
     opacity: 0,
-    // x: "100vh",
   },
   visible: {
     opacity: 1,
-    // x: 0,
     transition: {
-      // type: "spring",
-      // stiffnes: 150,
       duration: 2,
     },
   },
 };
 
-// const textVariantsLeft = {
-//   hover: {
-//     x: [-10, 0],
-//     scale: [1.1, 1],
-//     duration: 5,
-//     opacity: [0, 1],
-//   },
-//   initial: {
-//     x: 0,
-//     scale: 1,
-//     opacity: 1,
-//   },
-// };
-// const textVariantsRight = {
-//   hover: {
-//     x: [10, 0],
-//     scale: [1.1, 1],
-//     opacity: [0, 1],
-//   },
-//   initial: {
-//     x: 0,
-//     scale: 1,
-//     opacity: 1,
-//   },
-// };
-
 const UpperHexagons = () => {
-  // const [isHoveredOne, setIsHoveredOne] = useState(false);
-  // const [isHoveredTwo, setIsHoveredTwo] = useState(false);
-  // const [isHoveredThree, setIsHoveredThree] = useState(false);
-  // const [isHoveredFour, setIsHoveredFour] = useState(false);
-
-  // function handleMouseEnterOne() {
-  //   setIsHoveredOne(true);
-  // }
-  // function handleMouseLeaveOne() {
-  //   setIsHoveredOne(false);
-  // }
-  // function handleMouseEnterTwo() {
-  //   setIsHoveredTwo(true);
-  // }
-  // function handleMouseLeaveTwo() {
-  //   setIsHoveredTwo(false);
-  // }
-  // function handleMouseEnterThree() {
-  //   setIsHoveredThree(true);
-  // }
-  // function handleMouseLeaveThree() {
-  //   setIsHoveredThree(false);
-  // }
-  // function handleMouseEnterFour() {
-  //   setIsHoveredFour(true);
-  // }
-  // function handleMouseLeaveFour() {
-  //   setIsHoveredFour(false);
-  // }
   return (
     <Wrapper variants={pageContentVisible} initial="hidden" animate="visible">
       <div className="container">
         <Link to="/home">
-          <div
-            className=" scale"
-            // onMouseEnter={handleMouseEnterOne}
-            // onMouseLeave={handleMouseLeaveOne}
-          >
+          <div className=" scale">
             <div className="hexagon">
               <FontAwesomeIcon icon={faHouse} className="faicon" />
               <div className="text-inside">
-                <motion.p
-                // variants={textVariantsLeft}
-                // animate={isHoveredOne ? "hover" : "initial"}
-                >
-                  Poč
-                </motion.p>
-                <motion.p
-                // variants={textVariantsRight}
-                // animate={isHoveredOne ? "hover" : "initial"}
-                >
-                  etna
-                </motion.p>
+                <motion.p>Poč</motion.p>
+                <motion.p>etna</motion.p>
               </div>
             </div>
           </div>
         </Link>
-        <div
-          className="scale"
-          // onMouseEnter={handleMouseEnterTwo}
-          // onMouseLeave={handleMouseLeaveTwo}
-        >
+        <div className="scale">
           <div className="hexagon hexagon-second">
             <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
             <div className="text-inside">
-              <motion.p
-              // variants={textVariantsLeft}
-              // animate={isHoveredTwo ? "hover" : "initial"}
-              // className="about-us-txt"
-              >
-                O Nama
-              </motion.p>
+              <motion.p>O Nama</motion.p>
             </div>
           </div>
         </div>
-        <div
-          className="scale"
-          // onMouseEnter={handleMouseEnterThree}
-          // onMouseLeave={handleMouseLeaveThree}
-        >
+        <div className="scale">
           <div className="hexagon hexagon-third">
             <FontAwesomeIcon icon={faHand} className="faicon " />
             <div className="text-inside">
-              <motion.p
-              // variants={textVariantsLeft}
-              // animate={isHoveredThree ? "hover" : "initial"}
-              >
-                Usl
-              </motion.p>
-              <motion.p
-              // variants={textVariantsRight}
-              // animate={isHoveredThree ? "hover" : "initial"}
-              >
-                uge
-              </motion.p>
+              <motion.p>Usl</motion.p>
+              <motion.p>uge</motion.p>
             </div>
           </div>
         </div>
-        <div
-          className="scale"
-          // onMouseEnter={handleMouseEnterFour}
-          // onMouseLeave={handleMouseLeaveFour}
-        >
+        <div className="scale">
           <div className="hexagon hexagon-forth">
             <FontAwesomeIcon icon={faAddressBook} className="faicon" />
             <div className="text-inside">
-              <motion.p
-              // variants={textVariantsLeft}
-              // animate={isHoveredFour ? "hover" : "initial"}
-              >
-                Kont
-              </motion.p>
-              <motion.p
-              // variants={textVariantsRight}
-              // animate={isHoveredFour ? "hover" : "initial"}
-              >
-                akt
-              </motion.p>
+              <motion.p>Kont</motion.p>
+              <motion.p>akt</motion.p>
             </div>
           </div>
         </div>
@@ -179,7 +68,8 @@ const UpperHexagons = () => {
 };
 const Wrapper = styled(motion.div)`
   position: relative;
-
+  justify-content: center;
+  align-items: center;
   .about-us-txt {
     padding-right: 0.3rem;
   }
@@ -202,7 +92,8 @@ const Wrapper = styled(motion.div)`
   }
 
   .scale {
-    /* padding-top: 3rem; */
+    padding-top: 3rem;
+    /* margin-right: 7rem; */
     transition-duration: 0.25s;
   }
   .scale:hover {
@@ -211,7 +102,7 @@ const Wrapper = styled(motion.div)`
   .hexagon {
     position: relative;
     cursor: pointer;
-    margin-left: 6em;
+    /* margin-left: 6em; */
     width: 7em;
     height: 11.5em;
     border-radius: 1em/0.5em;
@@ -220,9 +111,11 @@ const Wrapper = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 30vw; */
   }
-  .hexagon-second {
+  .hexagon:nth-child(odd) {
+    margin-left: 6em;
+  }
+  /* .hexagon-second {
     margin-left: 6rem;
   }
   .hexagon-third {
@@ -230,7 +123,7 @@ const Wrapper = styled(motion.div)`
   }
   .hexagon-forth {
     margin-left: 6rem;
-  }
+  } */
   .hexagon:before,
   .hexagon:after {
     position: absolute;
@@ -278,6 +171,7 @@ const Wrapper = styled(motion.div)`
       width: 60%;
       margin-left: 10%;
       padding-bottom: 0;
+      padding-top: 3rem;
     }
     .scale {
       padding-top: 0;
@@ -292,7 +186,7 @@ const Wrapper = styled(motion.div)`
     .hexagon {
       margin-bottom: 1rem;
       margin-top: 1rem;
-      margin-left: 10rem;
+      /* margin-left: 10rem; */
     }
   }
   @media only screen and (max-width: 642px) {
@@ -304,7 +198,8 @@ const Wrapper = styled(motion.div)`
     }
     .hexagon {
       margin-bottom: 1rem;
-      margin-left: 6rem;
+      margin-right: 1rem;
+      /* margin-left: 6rem; */
     }
   }
 `;

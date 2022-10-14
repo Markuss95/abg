@@ -2,6 +2,7 @@ import styled from "styled-components";
 import logo from "../assets/abg_test.png";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import smallLogo from "../assets/logo_mobile.png";
@@ -24,6 +25,7 @@ function getWindowSize() {
   return { innerWidth, innerHeight };
 }
 const Navbar = () => {
+  const location = useLocation();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [scrollPosition, setScrollPosition] = useState(0);
   let turnArrowUp = false;
@@ -55,20 +57,30 @@ const Navbar = () => {
   return (
     <Wrapper>
       <Link to="/">
-        {windowSize.innerWidth > 900 ? (
-          <motion.img
-            src={logo}
-            alt="Logo"
-            className="logo"
-            variants={logoVisible}
-            initial="hidden"
-            animate="visible"
-          />
+        {/* {windowSize.innerWidth > 900 && location.pathname != "/" ? (
+          <motion.img src={logo} alt="Logo" className="logo" />
         ) : (
           <motion.img
             src={smallLogo}
             alt="smallLogo"
             className="logo small-logo"
+            variants={logoVisible}
+            initial="hidden"
+            animate="visible"
+          />
+        )} */}
+
+        {windowSize.innerWidth > 900 && (
+          <motion.img src={logo} alt="Logo" className="logo" />
+        )}
+        {windowSize.innerWidth < 901 && location.pathname != "/" && (
+          <motion.img
+            src={smallLogo}
+            alt="smallLogo"
+            className="logo small-logo"
+            variants={logoVisible}
+            initial="hidden"
+            animate="visible"
           />
         )}
       </Link>
