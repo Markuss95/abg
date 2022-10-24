@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import backgroundPhoto from "../assets/abgsl2.jpg";
 import homePhoto from "../assets/Testiranjeasfalta.jpg";
