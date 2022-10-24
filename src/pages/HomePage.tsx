@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import backgroundPhoto from "../assets/abgsl2.jpg";
+import homePhoto from "../assets/Testiranjeasfalta.jpg";
 const HomePage = () => {
   const [showFooter, setShowFooter] = useState<boolean>(true);
   useEffect(() => {
@@ -22,15 +24,21 @@ const HomePage = () => {
         </div>
         <div className="home-container">
           <div className="home-text">
-            <p>
-              ABG test d.o.o za tehničko ispitivanje i analizu osnovana je u
-              studenom 2017 g. Bavi se ispitivanjima u građevinarstvu i to
-              ispitivanjem asfalta, betona i geomehaničkim ispitivanjima.
-              Sastoji se od centralnog laboratorija smještenog u Drinskoj 123/a
-              Osijek i terenskog laboratorija za ispitivanje asfalta koji se
-              nalazi u Nemetinu (pored Osijeka). Djelatnici ABGtest-a su obučeni
-              i stručni, a ispitivanja provode umjerenom opremom.
-            </p>
+            <div className="white-line"></div>
+            <div>
+              <p>
+                ABG test d.o.o za tehničko ispitivanje i analizu osnovana je u
+                studenom 2017 g. Bavi se ispitivanjima u građevinarstvu i to
+                ispitivanjem asfalta, betona i geomehaničkim ispitivanjima.
+                Sastoji se od centralnog laboratorija smještenog u Drinskoj
+                123/a Osijek i terenskog laboratorija za ispitivanje asfalta
+                koji se nalazi u Nemetinu (pored Osijeka). Djelatnici ABGtest-a
+                su obučeni i stručni, a ispitivanja provode umjerenom opremom.
+              </p>
+            </div>
+          </div>
+          <div className="second-img-container">
+            <img src={homePhoto} alt="homePhoto" className="home-second-img" />
           </div>
         </div>
       </Wrapper>
@@ -48,7 +56,7 @@ const Wrapper = styled.div`
   }
   .home-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.6fr 1fr;
     gap: 2rem;
   }
 
@@ -58,22 +66,51 @@ const Wrapper = styled.div`
     position: relative;
     object-fit: cover;
   }
+  .home-second-img {
+    /* position: absolute;
+    object-fit: cover;
+    width: 50rem;
+    height: 32rem; */
+    flex-shrink: 0.7;
+    min-width: 100%;
+    min-height: 60%;
+  }
   .home-text {
     font-family: "Regular";
     color: white;
-    margin-top: 5rem;
-    margin-bottom: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
     p {
-      margin-left: 4rem;
-      margin-right: 4rem;
       text-align: left;
       line-height: 3rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
+  }
+  .second-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .white-line {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+    height: 0.2rem;
+    width: 1.8rem;
+    background-color: #5d6472;
   }
   @media only screen and (max-width: 942px) {
     .home-container {
       grid-template-columns: 1fr;
+    }
+    .home-text {
+      p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
     }
   }
 `;
