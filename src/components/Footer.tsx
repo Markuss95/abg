@@ -32,6 +32,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media only screen and (max-width: 942px) {
+    text-align: center;
+  }
+  @media only screen and (max-width: 642px) {
+  }
 `;
 
 export default Footer;

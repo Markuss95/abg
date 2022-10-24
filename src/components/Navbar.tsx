@@ -54,6 +54,9 @@ const Navbar = () => {
   } else {
     turnArrowUp = true;
   }
+  if (window.innerWidth < 943) {
+    turnArrowUp = false;
+  }
   return (
     <Wrapper>
       <Link to="/">
@@ -125,9 +128,6 @@ const Wrapper = styled.div`
     bottom: 3%;
     right: 2%;
     z-index: 101;
-  }
-  .hidden {
-    display: none;
   }
   @media only screen and (max-width: 628px) {
     .small-logo {
