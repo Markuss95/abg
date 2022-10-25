@@ -65,10 +65,6 @@ const Wrapper = styled.div`
     object-fit: cover;
   }
   .home-second-img {
-    /* position: absolute;
-    object-fit: cover;
-    width: 50rem;
-    height: 32rem; */
     flex-shrink: 0.7;
     min-width: 100%;
     min-height: 60%;
