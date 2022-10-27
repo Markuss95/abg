@@ -107,6 +107,12 @@ const Wrapper = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 642px) {
+    .home-text {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 export default HomePage;

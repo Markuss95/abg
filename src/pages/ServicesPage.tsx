@@ -12,7 +12,11 @@ const ServicesPage = () => {
             className="homeImage"
           />
         </div>
-        <div className="services-container">New div</div>
+        <div className="services-container">
+          <div>Asfalt</div>
+          <div>Beton</div>
+          <div>Geomehanička ispitivanja</div>
+        </div>
       </Wrapper>
       <Footer />
     </>
@@ -34,6 +38,8 @@ const Wrapper = styled.div`
   }
   .services-container {
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 export default ServicesPage;
