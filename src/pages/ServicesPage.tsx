@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import backgroundPhoto from "../assets/Usluge.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRoad, faCube, faFlaskVial } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faRoad, faCube, faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 
 const ServicesPage = () => {
   return (
