@@ -54,25 +54,12 @@ const Navbar = () => {
   } else {
     turnArrowUp = true;
   }
-  if (window.innerWidth < 943) {
+  if (window.innerWidth < 1176) {
     turnArrowUp = false;
   }
   return (
     <Wrapper>
       <Link to="/">
-        {/* {windowSize.innerWidth > 900 && location.pathname != "/" ? (
-          <motion.img src={logo} alt="Logo" className="logo" />
-        ) : (
-          <motion.img
-            src={smallLogo}
-            alt="smallLogo"
-            className="logo small-logo"
-            variants={logoVisible}
-            initial="hidden"
-            animate="visible"
-          />
-        )} */}
-
         {windowSize.innerWidth > 900 && (
           <motion.img src={logo} alt="Logo" className="logo" />
         )}
