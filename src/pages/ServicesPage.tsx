@@ -256,5 +256,94 @@ const Wrapper = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 1050px) {
+    .asphalt-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5rem;
+    }
+    .concrete-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 28%;
+    }
+    .geothermic-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 58%;
+    }
+    .left-pluses {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    .services-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr !important;
+      height: 120vh;
+    }
+    .right-pluses {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        all: initial;
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+    .services-text {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .services-container {
+      height: 120vh;
+    }
+    .asphalt-card {
+      height: 12.5rem;
+      width: 12.5rem;
+
+      p {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
+    }
+    .concrete-card {
+      height: 12.5rem;
+      width: 12.5rem;
+      p {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
+    }
+    .geothermic-card {
+      height: 12.5rem;
+      width: 12.5rem;
+      p {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
+    }
+    .asphalt-icon {
+      font-size: 1.9rem;
+    }
+  }
+  @media only screen and (max-height: 750px) {
+    .services-container {
+      height: 160vh;
+    }
+  }
 `;
 export default ServicesPage;
