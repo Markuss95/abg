@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import ServicesPage from "./pages/ServicesPage";
+import ContactsPage from "./pages/ContactsPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="" element={<LandingPage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="services" element={<ServicesPage />} />
+          <Route path="contacts" element={<ContactsPage />} />
         </Routes>
       </AnimatePresence>
     </>

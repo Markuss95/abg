@@ -56,15 +56,17 @@ const UpperHexagons = () => {
             </div>
           </div>
         </Link>
-        <div className="scale">
-          <div className="hexagon hexagon-forth">
-            <FontAwesomeIcon icon={faAddressBook} className="faicon" />
-            <div className="text-inside">
-              <motion.p>Kont</motion.p>
-              <motion.p>akt</motion.p>
+        <Link to="/contacts">
+          <div className="scale">
+            <div className="hexagon hexagon-forth">
+              <FontAwesomeIcon icon={faAddressBook} className="faicon" />
+              <div className="text-inside">
+                <motion.p>Kont</motion.p>
+                <motion.p>akt</motion.p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </Wrapper>
   );
