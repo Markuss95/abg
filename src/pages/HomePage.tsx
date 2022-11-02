@@ -22,7 +22,7 @@ const HomePage = () => {
         </div>
         <div className="home-container">
           <div className="home-text">
-            <div className="white-line"></div>
+            <div className="colored-line"></div>
             <div>
               <p>
                 ABG test d.o.o za tehničko ispitivanje i analizu osnovana je u
@@ -88,14 +88,7 @@ const Wrapper = styled.div`
     align-items: center;
     overflow: hidden;
   }
-  .white-line {
-    position: relative;
-    margin-top: 2.5rem;
-    margin-left: 2rem;
-    height: 0.2rem;
-    width: 1.8rem;
-    background-color: #5d6472;
-  }
+
   @media only screen and (max-width: 942px) {
     .home-container {
       grid-template-columns: 1fr;
