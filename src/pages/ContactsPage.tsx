@@ -16,19 +16,36 @@ const ContactsPage = () => (
               Opće informacije
               <br />
             </span>
-            <span className="contact-us-text">Malo teksta jos</span>
+            <span className="contact-us-text">
+              Drinska 123a <br />
+              Osijek, 31000,
+              <br />
+              Hrvatska
+            </span>
           </p>
         </div>
         <div className="contact-text">
           <div className="gray-line"></div>
           <p>
-            <span className="contact-us-title">Kontakt</span>
+            <span className="contact-us-title">
+              Kontakt <br />
+            </span>
+            <span className="contact-us-text">
+              Telefon: 031/271-741 <br />
+              Mobitel: 091/283-1126 <br />
+              Fax: 031/271-860
+            </span>
           </p>
         </div>
         <div className="contact-text">
           <div className="gray-line"></div>
           <p>
-            <span className="contact-us-title">Želite surađivati?</span>
+            <span className="contact-us-title">
+              Želite surađivati? <br />
+            </span>
+            <span className="contact-us-text">
+              Kontaktirajte nas na: info@abgtest.hr
+            </span>
           </p>
         </div>
       </div>
@@ -50,18 +67,24 @@ const ContactsWrapper = styled.div`
   }
   .contact-us-title {
     font-size: 1.5rem;
+    letter-spacing: 0.15rem;
   }
   .contact-us-text {
     position: absolute;
+    font-size: 1.1rem;
     margin-top: 1rem;
+    line-height: 4rem;
   }
   .contact-text {
     display: grid;
     grid-template-columns: 1fr 10fr;
+    gap: 0.7rem;
     margin-top: 2.5rem;
+    color: white;
   }
   .gray-line {
     position: relative;
+    margin-left: 1rem;
     margin-top: 0.9rem;
     height: 0.2rem;
     width: 1.8rem;
@@ -76,6 +99,9 @@ const ContactsWrapper = styled.div`
       min-width: 100vw;
       object-fit: cover;
     }
+  }
+
+  @media only screen and (max-width: 767px) {
   }
 `;
 
