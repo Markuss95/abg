@@ -79,7 +79,7 @@ const ContactsWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 10fr;
     gap: 0.7rem;
-    margin-top: 2.5rem;
+    margin-top: 5.3rem;
     color: white;
   }
   .gray-line {
