@@ -12,7 +12,7 @@ const override: CSSProperties = {
 const LandingPage = () => {
   const [loading, setLoading] = useState(false);
   const [counter, setCounter] = useState(0);
-  const color = "#5D6472";
+  const color = "#5D6472 ";
   useEffect(() => {
     setLoading(true);
     setCounter(counter + 1);
