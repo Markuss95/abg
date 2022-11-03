@@ -106,6 +106,14 @@ const ContactsWrapper = styled.div`
     }
   }
   @media only screen and (max-width: 767px) {
+    .contacts-container {
+      height: 90vh;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .gray-line {
+      width: 1rem;
+    }
   }
 `;
 
