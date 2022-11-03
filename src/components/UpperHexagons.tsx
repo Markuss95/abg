@@ -36,15 +36,16 @@ const UpperHexagons = () => {
             </div>
           </div>
         </Link>
-
-        <div className="scale">
-          <div className="hexagon hexagon-second">
-            <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
-            <div className="text-inside">
-              <motion.p>O Nama</motion.p>
+        <Link to="/about">
+          <div className="scale">
+            <div className="hexagon hexagon-second">
+              <FontAwesomeIcon icon={faCircleInfo} className="faicon" />
+              <div className="text-inside">
+                <motion.p>O Nama</motion.p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
         <Link to="/services">
           <div className="scale">
             <div className="hexagon hexagon-third">
