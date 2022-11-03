@@ -208,22 +208,22 @@ const Wrapper = styled.div`
 
   @media only screen and (max-width: 1550px) {
     .asphalt-card {
-      height: 18rem;
-      width: 16rem;
+      height: 19rem;
+      width: 17rem;
       p {
         line-height: 1.7rem;
       }
     }
     .concrete-card {
-      height: 18rem;
-      width: 16rem;
+      height: 19rem;
+      width: 17rem;
       p {
         line-height: 1.7rem;
       }
     }
     .geothermic-card {
-      height: 18rem;
-      width: 16rem;
+      height: 19rem;
+      width: 17rem;
       p {
         line-height: 1.7rem;
       }
@@ -231,8 +231,8 @@ const Wrapper = styled.div`
   }
   @media only screen and (max-width: 1300px) {
     .asphalt-card {
-      height: 14rem;
-      width: 14rem;
+      height: 17rem;
+      width: 15rem;
 
       p {
         line-height: 1.7rem;
@@ -240,16 +240,16 @@ const Wrapper = styled.div`
       }
     }
     .concrete-card {
-      height: 14rem;
-      width: 14rem;
+      height: 17rem;
+      width: 15rem;
       p {
         line-height: 1.7rem;
         font-size: 1rem;
       }
     }
     .geothermic-card {
-      height: 14rem;
-      width: 14rem;
+      height: 17rem;
+      width: 15rem;
       p {
         line-height: 1.7rem;
         font-size: 1rem;
@@ -263,6 +263,15 @@ const Wrapper = styled.div`
       align-items: center;
       padding-bottom: 5rem;
     }
+    .asphalt-card {
+      height: 13.5rem;
+      width: 12.5rem;
+
+      p {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
+    }
     .concrete-container {
       position: relative;
       display: flex;
@@ -270,12 +279,28 @@ const Wrapper = styled.div`
       align-items: center;
       top: 28%;
     }
+    .concrete-card {
+      height: 12.5rem;
+      width: 12.5rem;
+      p {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
+    }
     .geothermic-container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       top: 58%;
+    }
+    .geothermic-card {
+      height: 12.5rem;
+      width: 12.5rem;
+      p {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
     }
     .left-pluses {
       display: flex;

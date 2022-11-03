@@ -57,7 +57,7 @@ const ContactsPage = () => (
 const ContactsWrapper = styled.div`
   .contacts-container {
     position: relative;
-    height: 55vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     background-color: #d3d3d3;
@@ -79,7 +79,7 @@ const ContactsWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 10fr;
     gap: 0.7rem;
-    margin-top: 5.3rem;
+    margin-top: 3.3rem;
     color: white;
   }
   .gray-line {
@@ -100,7 +100,11 @@ const ContactsWrapper = styled.div`
       object-fit: cover;
     }
   }
-
+  @media only screen and (max-height: 600px) {
+    .contacts-container {
+      height: 70vh;
+    }
+  }
   @media only screen and (max-width: 767px) {
   }
 `;
