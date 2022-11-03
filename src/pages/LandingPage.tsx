@@ -11,14 +11,16 @@ const override: CSSProperties = {
 
 const LandingPage = () => {
   const [loading, setLoading] = useState(false);
+  const [counter, setCounter] = useState(0);
   const color = "#5D6472";
   useEffect(() => {
     setLoading(true);
+    setCounter(counter + 1);
     setTimeout(() => {
       setLoading(false);
     }, 1950);
   }, []);
-  if (loading) {
+  if (loading && counter !== 1) {
     return (
       <Drapper>
         <HashLoader
