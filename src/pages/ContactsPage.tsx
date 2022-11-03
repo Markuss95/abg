@@ -44,7 +44,7 @@ const ContactsPage = () => (
               Želite surađivati? <br />
             </span>
             <span className="contact-us-text">
-              Kontaktirajte nas na: info@abgtest.hr
+              Kontaktirajte nas na: <br /> info@abgtest.hr
             </span>
           </p>
         </div>
@@ -108,6 +108,9 @@ const ContactsWrapper = styled.div`
   @media only screen and (max-width: 767px) {
     .contacts-container {
       height: 90vh;
+    }
+    .contact-us-text {
+      line-height: 3.2rem;
     }
   }
   @media only screen and (max-width: 420px) {
