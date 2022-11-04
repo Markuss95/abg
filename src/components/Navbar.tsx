@@ -32,7 +32,6 @@ function getWindowSize() {
 const Navbar = () => {
   const dispatch = useDispatch();
   const { increaseCount } = bindActionCreators(actionCreators, dispatch);
-  const counter = useSelector((state: State) => state.navigation);
   const location = useLocation();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [scrollPosition, setScrollPosition] = useState(0);
