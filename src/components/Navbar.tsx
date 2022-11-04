@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import logo from "../assets/abg_test.png";
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { actionCreators } from "../state";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import smallLogo from "../assets/logo_mobile.png";
 import { Link } from "react-router-dom";
+import logo from "../assets/abg_test.png";
+import { useSelector } from "react-redux";
+import { State } from "../state/reducers";
 
 const logoVisible = {
   hidden: {
@@ -25,10 +30,14 @@ function getWindowSize() {
   return { innerWidth, innerHeight };
 }
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const { increaseCount } = bindActionCreators(actionCreators, dispatch);
+  const counter = useSelector((state: State) => state.navigation);
   const location = useLocation();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [scrollPosition, setScrollPosition] = useState(0);
   let turnArrowUp = false;
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -59,7 +68,7 @@ const Navbar = () => {
   }
   return (
     <Wrapper>
-      <Link to="/">
+      <Link to="/" onClick={() => increaseCount(122)}>
         {windowSize.innerWidth > 900 && (
           <motion.img src={logo} alt="Logo" className="logo" />
         )}
@@ -131,4 +140,5 @@ const Wrapper = styled.div`
     }
   }
 `;
+
 export default Navbar;

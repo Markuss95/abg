@@ -2,7 +2,8 @@ import UpperHexagons from "../components/UpperHexagons";
 import { useState, useEffect, CSSProperties } from "react";
 import HashLoader from "react-spinners/HashLoader";
 import styled from "styled-components";
-
+import { State } from "../state/reducers";
+import { useSelector } from "react-redux";
 const override: CSSProperties = {
   display: "block",
   margin: "0 auto",
@@ -10,6 +11,8 @@ const override: CSSProperties = {
 };
 
 const LandingPage = () => {
+  const counter = useSelector((state: State) => state.navigation);
+  console.log(counter);
   const [loading, setLoading] = useState(false);
   const color = "#5D6472 ";
   useEffect(() => {
@@ -18,7 +21,7 @@ const LandingPage = () => {
       setLoading(false);
     }, 1950);
   }, []);
-  if (loading) {
+  if (loading && counter < 2) {
     return (
       <Drapper>
         <HashLoader
