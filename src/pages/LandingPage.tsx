@@ -12,7 +12,6 @@ const override: CSSProperties = {
 
 const LandingPage = () => {
   const counter = useSelector((state: State) => state.navigation);
-  console.log(counter);
   const [loading, setLoading] = useState(false);
   const color = "#5D6472 ";
   useEffect(() => {
