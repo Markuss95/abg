@@ -10,8 +10,6 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import smallLogo from "../assets/logo_mobile.png";
 import { Link } from "react-router-dom";
 import logo from "../assets/abg_test.png";
-import { useSelector } from "react-redux";
-import { State } from "../state/reducers";
 
 const logoVisible = {
   hidden: {
