@@ -25,13 +25,10 @@ const HomePage = () => {
             <div className="colored-line"></div>
             <div>
               <p>
-                ABG test d.o.o za tehničko ispitivanje i analizu osnovana je u
+                ABG test d.o.o. za tehničko ispitivanje i analizu osnovano je u
                 studenom 2017 g. Bavi se ispitivanjima u građevinarstvu i to
-                ispitivanjem asfalta, betona i geomehaničkim ispitivanjima.
-                Sastoji se od centralnog laboratorija smještenog u Drinskoj
-                123/a Osijek i terenskog laboratorija za ispitivanje asfalta
-                koji se nalazi u Nemetinu (pored Osijeka). Djelatnici ABGtest-a
-                su obučeni i stručni, a ispitivanja provode umjerenom opremom.
+                ispitivanjem asfalta i bitumena ili bitumenskog veziva, betona i
+                geomehaničkim ispitivanjima.
               </p>
             </div>
           </div>
@@ -79,7 +76,7 @@ const Wrapper = styled.div`
     p {
       text-align: left;
       line-height: 3rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
   .second-img-container {
