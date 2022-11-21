@@ -22,9 +22,12 @@ const AboutUsPage = () => {
           <p>
             Djelatnici ABG test-a su obučeni i stručni, a ispitivanja provode
             umjerenom opremom. Posjedujemo potvrdu o{" "}
-            <Link to="https://drive.google.com/uc?export=download&id=18B8LW8L5rRNLoICLh6ihO3G3giSil6TK">
+            <a
+              className="acreditation-link"
+              href="https://drive.google.com/uc?export=download&id=18B8LW8L5rRNLoICLh6ihO3G3giSil6TK"
+            >
               akreditaciji
-            </Link>
+            </a>
             . U ovom trenutku imamo 23 akreditirane metode ispitivanja.
           </p>
         </div>
@@ -35,6 +38,12 @@ const AboutUsPage = () => {
 };
 
 const Wrapper = styled.div`
+  .acreditation-link {
+    color: white;
+    text-decoration: none;
+    color: black;
+    font-family: "bold";
+  }
   .about-us-container {
     position: relative;
     /* height: 60vh; */
