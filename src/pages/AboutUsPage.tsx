@@ -35,7 +35,7 @@ const AboutUsPage = () => {
 const Wrapper = styled.div`
   .about-us-container {
     position: relative;
-    height: 60vh;
+    /* height: 60vh; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     color: white;
