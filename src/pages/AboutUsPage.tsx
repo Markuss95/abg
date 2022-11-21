@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import AboutUsPhoto from "../assets/aboutus.jpg";
 const AboutUsPage = () => {
@@ -14,16 +15,17 @@ const AboutUsPage = () => {
         </div>
         <div className="about-us-container">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-            repudiandae aperiam distinctio corrupti, tempore explicabo dolor
-            quos! Perspiciatis voluptate quis aperiam at officiis debitis,
-            eveniet odio quo excepturi unde incidunt!
+            ABG test se sastoji od centralnog laboratorija smještenog u Drinskoj
+            123/a Osijek i terenskog laboratorija za ispitivanje asfalta i
+            bitumena ili bitumenskog veziva koji se nalazi u Našicama.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum
-            mollitia, ea libero tempora neque labore. Facilis earum nemo
-            perferendis possimus rerum omnis. Enim molestias quaerat rem, facere
-            vitae voluptates?
+            Djelatnici ABG test-a su obučeni i stručni, a ispitivanja provode
+            umjerenom opremom. Posjedujemo potvrdu o{" "}
+            <Link to="https://drive.google.com/uc?export=download&id=18B8LW8L5rRNLoICLh6ihO3G3giSil6TK">
+              akreditaciji
+            </Link>
+            . U ovom trenutku imamo 23 akreditirane metode ispitivanja.
           </p>
         </div>
       </Wrapper>
@@ -43,7 +45,7 @@ const Wrapper = styled.div`
       text-align: left;
       line-height: 3rem;
       font-size: 1.4rem;
-      margin: 4rem 4rem;
+      margin: 6.5rem 6.5rem;
     }
   }
   .image-container {
