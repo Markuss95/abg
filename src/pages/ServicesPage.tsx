@@ -31,12 +31,10 @@ const ServicesPage = () => {
               <span>Naše</span>
               <span>Usluge</span>
             </p>{" "}
-            <div className="asphalt-card">
-              <Link to="/asphalt">
-                <FontAwesomeIcon icon={faRoad} className="asphalt-icon" />
-                <p>Ispitivanja proizvedenih i ugrađenih asfaltnih mješavina</p>
-              </Link>
-            </div>
+            <Link to="/asphalt" className="asphalt-card">
+              <FontAwesomeIcon icon={faRoad} className="asphalt-icon" />
+              <p>Ispitivanja proizvedenih i ugrađenih asfaltnih mješavina</p>
+            </Link>
           </div>
           <div className="concrete-container">
             <div className="concrete-card">
@@ -77,6 +75,7 @@ const Wrapper = styled.div`
     background-color: #5d6472;
     border-radius: 0px 26px 0px 26px;
     transition-duration: 0.3s;
+    text-decoration: none;
     p {
       font-family: "Regular";
       font-size: 1.3rem;
