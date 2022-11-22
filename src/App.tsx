@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import ServicesPage from "./pages/ServicesPage";
 import ContactsPage from "./pages/ContactsPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import AsphaltPage from "./pages/AsphaltPage";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="home" element={<HomePage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="contacts" element={<ContactsPage />} />
+          <Route path="asphalt" element={<AsphaltPage />} />
         </Routes>
       </AnimatePresence>
     </>

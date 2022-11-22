@@ -45,7 +45,7 @@ const Wrapper = styled.div`
     transition-duration: 0.5s;
   }
   .acreditation-link:hover {
-    color: gray;
+    color: blue;
   }
   .about-us-container {
     position: relative;

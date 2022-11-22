@@ -27,7 +27,7 @@ const HomePage = () => {
               <p>
                 ABG test d.o.o. za tehničko ispitivanje i analizu osnovano je u
                 studenom 2017 g. Bavi se ispitivanjima u građevinarstvu i to
-                ispitivanjem asfalta i bitumena ili bitumenskog veziva, betona i
+                ispitivanjem asfalta, bitumena ili bitumenskog veziva, betona i
                 geomehaničkim ispitivanjima.
               </p>
             </div>

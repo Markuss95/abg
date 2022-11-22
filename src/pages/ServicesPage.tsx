@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import backgroundPhoto from "../assets/Usluge.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,11 +30,13 @@ const ServicesPage = () => {
             <p className="services-text">
               <span>Naše</span>
               <span>Usluge</span>
-            </p>
-            <div className="asphalt-card">
-              <FontAwesomeIcon icon={faRoad} className="asphalt-icon" />
-              <p>Ispitivanja proizvedenih i ugrađenih asfaltnih mješavina</p>
-            </div>
+            </p>{" "}
+            <Link to="/asphalt">
+              <div className="asphalt-card">
+                <FontAwesomeIcon icon={faRoad} className="asphalt-icon" />
+                <p>Ispitivanja proizvedenih i ugrađenih asfaltnih mješavina</p>
+              </div>
+            </Link>
           </div>
           <div className="concrete-container">
             <div className="concrete-card">
