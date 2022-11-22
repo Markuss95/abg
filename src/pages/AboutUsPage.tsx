@@ -42,6 +42,10 @@ const Wrapper = styled.div`
     /* text-decoration: none; */
     color: white;
     font-family: "bold";
+    transition-duration: 0.5s;
+  }
+  .acreditation-link:hover {
+    color: gray;
   }
   .about-us-container {
     position: relative;
