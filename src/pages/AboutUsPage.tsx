@@ -16,14 +16,14 @@ const AboutUsPage = () => {
           <p>
             ABG test se sastoji od centralnog laboratorija smještenog u Drinskoj
             123/a Osijek i terenskog laboratorija za ispitivanje asfalta i
-            bitumena ili bitumenskog veziva koji se nalazi u Našicama.
+            bitumenskog veziva koji se nalazi u Našicama.
           </p>
           <p>
             Djelatnici ABG test-a su obučeni i stručni, a ispitivanja provode
             umjerenom opremom. Posjedujemo potvrdu o{" "}
             <a
               className="acreditation-link"
-              href="https://drive.google.com/uc?export=download&id=18B8LW8L5rRNLoICLh6ihO3G3giSil6TK"
+              href="https://drive.google.com/uc?export=download&id=1QPkPsP88AVfdiX1pRJSZL_j4jyczFeAs"
             >
               akreditaciji
             </a>
