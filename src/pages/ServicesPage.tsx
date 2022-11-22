@@ -31,12 +31,12 @@ const ServicesPage = () => {
               <span>Naše</span>
               <span>Usluge</span>
             </p>{" "}
-            <Link to="/asphalt">
-              <div className="asphalt-card">
+            <div className="asphalt-card">
+              <Link to="/asphalt">
                 <FontAwesomeIcon icon={faRoad} className="asphalt-icon" />
                 <p>Ispitivanja proizvedenih i ugrađenih asfaltnih mješavina</p>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
           <div className="concrete-container">
             <div className="concrete-card">
@@ -259,7 +259,7 @@ const Wrapper = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1192px) {
     .asphalt-container {
       display: flex;
       justify-content: center;
