@@ -39,8 +39,8 @@ const AboutUsPage = () => {
 const Wrapper = styled.div`
   .acreditation-link {
     color: white;
-    text-decoration: none;
-    color: black;
+    /* text-decoration: none; */
+    color: white;
     font-family: "bold";
   }
   .about-us-container {
