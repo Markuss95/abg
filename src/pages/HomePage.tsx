@@ -3,13 +3,6 @@ import Footer from "../components/Footer";
 import backgroundPhoto from "../assets/abgsl2.jpg";
 import homePhoto from "../assets/Testiranjeasfalta.jpg";
 const HomePage = () => {
-  // const [showFooter, setShowFooter] = useState<boolean>(true);
-  // useEffect(() => {
-  //   if (window.innerWidth < 943) {
-  //     setShowFooter(false);
-  //   }
-  // });
-
   return (
     <>
       <Wrapper>
