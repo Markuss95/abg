@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import { useMemo } from "react";
+import { Box, Button } from "@mui/material";
+import { ExportToCsv } from "export-to-csv";
 import infratestPhoto from "../assets/infratest.jpg";
 import MaterialReactTable, { MRT_ColumnDef } from "material-react-table";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 type Testings = {
   materials: string;
   property: string;
@@ -78,6 +81,19 @@ const AsphaltPage = () => {
     ],
     []
   );
+  const csvOptions = {
+    fieldSeparator: ",",
+    quoteStrings: '"',
+    decimalSeparator: ".",
+    showLabels: true,
+    useBom: true,
+    useKeysAsHeaders: false,
+    headers: columns.map((c) => c.header),
+  };
+  const handleExportData = () => {
+    csvExporter.generateCsv(data);
+  };
+  const csvExporter = new ExportToCsv(csvOptions);
   return (
     <>
       <Wrapper>
@@ -89,6 +105,26 @@ const AsphaltPage = () => {
         <MaterialReactTable
           columns={columns}
           data={data}
+          renderTopToolbarCustomActions={({ table }) => (
+            <Box
+              sx={{
+                display: "flex",
+                gap: "1rem",
+                p: "0.5rem",
+                flexWrap: "wrap",
+              }}
+            >
+              <Button
+                color="primary"
+                //export all data that is currently in the table (ignore pagination, sorting, filtering, etc.)
+                onClick={handleExportData}
+                startIcon={<FileDownloadIcon />}
+                variant="contained"
+              >
+                Izvezi tablicu u excel obliku
+              </Button>
+            </Box>
+          )}
           localization={{
             clearSearch: "Očisti pretragu",
             filterByColumn: "",
