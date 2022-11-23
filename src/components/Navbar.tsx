@@ -63,6 +63,9 @@ const Navbar = () => {
   if (window.innerWidth < 1176) {
     turnArrowUp = false;
   }
+  if (location.pathname === "/asphalt") {
+    turnArrowUp = false;
+  }
   return (
     <Wrapper>
       <Link to="/" onClick={() => increaseCount(122)}>
