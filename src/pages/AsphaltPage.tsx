@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import Footer from "../components/Footer";
 import { useMemo } from "react";
 import infratestPhoto from "../assets/infratest.jpg";
 import MaterialReactTable, { MRT_ColumnDef } from "material-react-table";
-
 type Testings = {
   materials: string;
   property: string;
@@ -79,31 +79,34 @@ const AsphaltPage = () => {
     []
   );
   return (
-    <Wrapper>
-      <img
-        src={infratestPhoto}
-        alt="backgroundPhoto"
-        className="infratestImage"
-      />
-      <MaterialReactTable
-        columns={columns}
-        data={data}
-        localization={{
-          clearSearch: "Očisti pretragu",
-          filterByColumn: "",
-          hideAll: "Sakrij sve",
-          of: "od",
-          rowsPerPage: "Redova po stranici",
-          showAll: "Prikaži sve",
-          showHideSearch: "Prikaži/sakrij pretragu",
-          showHideFilters: "Prikaži/sakrij filtere",
-          showHideColumns: "Prikaži/sakrij stupce",
-          search: "Pretraga",
-          toggleDensity: "Skupi redove",
-          toggleFullScreen: "Puni zaslon",
-        }}
-      />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <img
+          src={infratestPhoto}
+          alt="backgroundPhoto"
+          className="infratestImage"
+        />
+        <MaterialReactTable
+          columns={columns}
+          data={data}
+          localization={{
+            clearSearch: "Očisti pretragu",
+            filterByColumn: "",
+            hideAll: "Sakrij sve",
+            of: "od",
+            rowsPerPage: "Redova po stranici",
+            showAll: "Prikaži sve",
+            showHideSearch: "Prikaži/sakrij pretragu",
+            showHideFilters: "Prikaži/sakrij filtere",
+            showHideColumns: "Prikaži/sakrij stupce",
+            search: "Pretraga",
+            toggleDensity: "Skupi redove",
+            toggleFullScreen: "Puni zaslon",
+          }}
+        />
+      </Wrapper>
+      <Footer />
+    </>
   );
 };
 
