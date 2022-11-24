@@ -17,8 +17,19 @@ const logoVisible = {
   },
   visible: {
     opacity: 1,
+    x: 0,
     transition: {
-      duration: 2,
+      duration: 1.5,
+    },
+  },
+};
+
+const logoInvisible = {
+  initial: { x: 0 },
+  animate: {
+    x: 300,
+    transition: {
+      duration: 1.5,
     },
   },
 };
@@ -33,15 +44,20 @@ const Navbar = () => {
   const location = useLocation();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [userHasScrolled, setUserHasScrolled] = useState(false);
+  const [mouseMoved, setMouseMoved] = useState(false);
   let turnArrowUp = false;
 
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
+  // useEffect=(()=>{
+  //   addEventListener("mousemove", (event) => {});
+  //   onmousemove = (event) => {setMouseMoved(true)};
+  // },[mouseMoved])
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -66,36 +82,118 @@ const Navbar = () => {
   if (location.pathname === "/asphalt") {
     turnArrowUp = false;
   }
-  return (
-    <Wrapper>
-      <Link to="/" onClick={() => increaseCount(122)}>
-        {windowSize.innerWidth > 900 && (
-          <motion.img src={logo} alt="Logo" className="logo" />
-        )}
-        {windowSize.innerWidth < 901 && location.pathname !== "/" && (
-          <motion.img
-            src={smallLogo}
-            alt="smallLogo"
-            className="logo small-logo"
-            variants={logoVisible}
-            initial="hidden"
-            animate="visible"
+
+  window.onscroll = function (e) {
+    setUserHasScrolled(true);
+  };
+
+  useEffect(() => {
+    if (userHasScrolled === true) {
+      setTimeout(() => {
+        setUserHasScrolled(false);
+      }, 3000);
+    }
+    console.log(userHasScrolled);
+  }, [userHasScrolled]);
+
+  if (!userHasScrolled && scrollPosition > 20) {
+    return (
+      <Wrapper>
+        <Link to="/" onClick={() => increaseCount(122)}>
+          {windowSize.innerWidth > 900 && (
+            <motion.img
+              src={logo}
+              alt="Logo"
+              className="hidden"
+              variants={logoInvisible}
+              initial="initial"
+              animate="visible"
+            />
+          )}
+          {windowSize.innerWidth < 901 && location.pathname !== "/" && (
+            <motion.img
+              src={smallLogo}
+              alt="smallLogo"
+              className="logo small-logo"
+              variants={logoInvisible}
+              initial="initial"
+              animate="visible"
+            />
+          )}
+        </Link>
+        <div
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
+          <FontAwesomeIcon
+            icon={faArrowUp}
+            className={turnArrowUp ? "arrow-up" : "hidden"}
           />
-        )}
-      </Link>
-      <div
-        onClick={() => {
-          window.scrollTo({ top: 0 });
-        }}
-      >
-        <FontAwesomeIcon
-          icon={faArrowUp}
-          className={turnArrowUp ? "arrow-up" : "hidden"}
-        />
-      </div>
-    </Wrapper>
-  );
+        </div>
+      </Wrapper>
+    );
+  } else {
+    return (
+      <Wrapper>
+        <Link to="/" onClick={() => increaseCount(122)}>
+          {windowSize.innerWidth > 900 && (
+            <motion.img src={logo} alt="Logo" className="logo" />
+          )}
+          {windowSize.innerWidth < 901 && location.pathname !== "/" && (
+            <motion.img
+              src={smallLogo}
+              alt="smallLogo"
+              className="logo small-logo"
+              variants={logoVisible}
+              initial="hidden"
+              animate="visible"
+            />
+          )}
+        </Link>
+        <div
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
+          <FontAwesomeIcon
+            icon={faArrowUp}
+            className={turnArrowUp ? "arrow-up" : "hidden"}
+          />
+        </div>
+      </Wrapper>
+    );
+  }
 };
+// return (
+//   <Wrapper>
+//     <Link to="/" onClick={() => increaseCount(122)}>
+//       {windowSize.innerWidth > 900 && (
+//         <motion.img src={logo} alt="Logo" className="logo" />
+//       )}
+//       {windowSize.innerWidth < 901 && location.pathname !== "/" && (
+//         <motion.img
+//           src={smallLogo}
+//           alt="smallLogo"
+//           className="logo small-logo"
+//           variants={logoVisible}
+//           initial="hidden"
+//           animate="visible"
+//         />
+//       )}
+//     </Link>
+//     <div
+//       onClick={() => {
+//         window.scrollTo({ top: 0 });
+//       }}
+//     >
+//       <FontAwesomeIcon
+//         icon={faArrowUp}
+//         className={turnArrowUp ? "arrow-up" : "hidden"}
+//       />
+//     </div>
+//   </Wrapper>
+// );
 
 const Wrapper = styled.div`
   .logo {
