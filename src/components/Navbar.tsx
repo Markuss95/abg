@@ -45,7 +45,7 @@ const Navbar = () => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [scrollPosition, setScrollPosition] = useState(0);
   const [userHasScrolled, setUserHasScrolled] = useState(false);
-  const [mouseMoved, setMouseMoved] = useState(false);
+  // const [mouseMoved, setMouseMoved] = useState(false);
   let turnArrowUp = false;
 
   const handleScroll = () => {
