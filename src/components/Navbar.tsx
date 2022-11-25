@@ -165,35 +165,6 @@ const Navbar = () => {
     );
   }
 };
-// return (
-//   <Wrapper>
-//     <Link to="/" onClick={() => increaseCount(122)}>
-//       {windowSize.innerWidth > 900 && (
-//         <motion.img src={logo} alt="Logo" className="logo" />
-//       )}
-//       {windowSize.innerWidth < 901 && location.pathname !== "/" && (
-//         <motion.img
-//           src={smallLogo}
-//           alt="smallLogo"
-//           className="logo small-logo"
-//           variants={logoVisible}
-//           initial="hidden"
-//           animate="visible"
-//         />
-//       )}
-//     </Link>
-//     <div
-//       onClick={() => {
-//         window.scrollTo({ top: 0 });
-//       }}
-//     >
-//       <FontAwesomeIcon
-//         icon={faArrowUp}
-//         className={turnArrowUp ? "arrow-up" : "hidden"}
-//       />
-//     </div>
-//   </Wrapper>
-// );
 
 const Wrapper = styled.div`
   .logo {
