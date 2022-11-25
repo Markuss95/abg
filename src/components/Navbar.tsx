@@ -93,7 +93,6 @@ const Navbar = () => {
         setUserHasScrolled(false);
       }, 3000);
     }
-    console.log(userHasScrolled);
   }, [userHasScrolled]);
 
   if (!userHasScrolled && scrollPosition > 20) {

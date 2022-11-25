@@ -36,12 +36,12 @@ const ServicesPage = () => {
               <p>Ispitivanja proizvedenih i ugrađenih asfaltnih mješavina</p>
             </Link>
           </div>
-          <div className="concrete-container">
+          <Link to="/concrete" className="concrete-container">
             <div className="concrete-card">
               <FontAwesomeIcon icon={faCube} className="concrete-icon" />
               <p>Ispitivanja svježeg i očvrsnulog betona </p>
             </div>
-          </div>
+          </Link>
           <div className="geothermic-container">
             <div className="geothermic-card">
               <FontAwesomeIcon icon={faFlaskVial} className="geothermic-icon" />
@@ -367,9 +367,15 @@ const Wrapper = styled.div`
       font-size: 1.9rem;
     }
   }
+
   @media only screen and (max-height: 750px) {
     .services-container {
       height: 160vh;
+    }
+  }
+  @media only screen and (min-height: 751px) and (max-height: 850px) {
+    .services-container {
+      height: 140vh;
     }
   }
 `;

@@ -147,6 +147,7 @@ const AsphaltPage = () => {
 };
 
 const Wrapper = styled.div`
+  font-family: "Regular";
   background-color: white;
   .infratestImage {
     width: 100vw;

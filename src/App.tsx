@@ -8,6 +8,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactsPage from "./pages/ContactsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import AsphaltPage from "./pages/AsphaltPage";
+import ConcretePage from "./pages/ConcretePage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="services" element={<ServicesPage />} />
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="asphalt" element={<AsphaltPage />} />
+          <Route path="concrete" element={<ConcretePage />} />
         </Routes>
       </AnimatePresence>
     </>
