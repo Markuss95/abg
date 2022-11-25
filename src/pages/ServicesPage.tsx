@@ -370,12 +370,17 @@ const Wrapper = styled.div`
 
   @media only screen and (max-height: 750px) {
     .services-container {
-      height: 160vh;
+      height: 140vh;
     }
   }
   @media only screen and (min-height: 751px) and (max-height: 850px) {
     .services-container {
       height: 140vh;
+    }
+  }
+  @media only screen and (max-height: 700px) {
+    .services-container {
+      height: 160vh;
     }
   }
 `;
