@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import concreteImage from "../assets/beton_slika.jpg";
+import concreteImage from "../assets/beton_slika-min - Copy.jpg";
 
 const ConcretePage = () => {
   return (
@@ -15,6 +15,7 @@ const ConcretePage = () => {
 
 const Wrapper = styled.div`
   font-family: "Regular";
+  line-height: 0;
   .concreteImage {
     width: 100vw;
     height: 100vh;
