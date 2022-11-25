@@ -79,7 +79,7 @@ const Navbar = () => {
   if (window.innerWidth < 1176) {
     turnArrowUp = false;
   }
-  if (location.pathname === "/asphalt") {
+  if (location.pathname === "/asphalt" || location.pathname === "/concrete") {
     turnArrowUp = false;
   }
 
