@@ -139,6 +139,9 @@ const AsphaltPage = () => {
             search: "Pretraga",
             toggleDensity: "Skupi redove",
             toggleFullScreen: "Puni zaslon",
+            unsorted: "Nije sortirano",
+            sortedByColumnAsc: "",
+            sortedByColumnDesc: "",
           }}
         />
       </Wrapper>
