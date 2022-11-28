@@ -142,6 +142,7 @@ const AsphaltPage = () => {
             unsorted: "Nije sortirano",
             sortedByColumnAsc: "",
             sortedByColumnDesc: "",
+            toggleVisibility: "Prikaži / Sakrij",
           }}
         />
       </Wrapper>

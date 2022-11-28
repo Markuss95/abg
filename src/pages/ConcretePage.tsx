@@ -134,6 +134,7 @@ const ConcretePage = () => {
             unsorted: "Nije sortirano",
             sortedByColumnAsc: "",
             sortedByColumnDesc: "",
+            toggleVisibility: "Prikaži / Sakrij",
           }}
         />
       </Wrapper>
