@@ -105,6 +105,7 @@ const AsphaltPage = () => {
         <MaterialReactTable
           columns={columns}
           data={data}
+          enableColumnActions={false}
           renderTopToolbarCustomActions={({ table }) => (
             <Box
               sx={{
