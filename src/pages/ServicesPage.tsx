@@ -45,7 +45,7 @@ const ServicesPage = () => {
           <div className="geothermic-container">
             <div className="geothermic-card">
               <FontAwesomeIcon icon={faFlaskVial} className="geothermic-icon" />
-              <p>Geomehanička ispitivanja </p>
+              <p>Ostala ispitivanja</p>
             </div>
           </div>
 
