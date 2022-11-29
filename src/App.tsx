@@ -9,6 +9,7 @@ import ContactsPage from "./pages/ContactsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import AsphaltPage from "./pages/AsphaltPage";
 import ConcretePage from "./pages/ConcretePage";
+import ExaminationPage from "./pages/ExaminationPage";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="asphalt" element={<AsphaltPage />} />
           <Route path="concrete" element={<ConcretePage />} />
+          <Route path="examinations" element={<ExaminationPage />} />
         </Routes>
       </AnimatePresence>
     </>

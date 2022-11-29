@@ -42,13 +42,12 @@ const ServicesPage = () => {
               <p>Ispitivanja svježeg i očvrsnulog betona </p>
             </div>
           </Link>
-          <div className="geothermic-container">
+          <Link to="/examinations" className="geothermic-container">
             <div className="geothermic-card">
               <FontAwesomeIcon icon={faFlaskVial} className="geothermic-icon" />
               <p>Ostala ispitivanja</p>
             </div>
-          </div>
-
+          </Link>
           <div className="right-pluses">
             <p>
               <span>++++++++</span>
