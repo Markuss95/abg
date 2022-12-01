@@ -16,13 +16,13 @@ type Testings = {
 const data: Testings[] = [
   {
     materials: "Podloge za izgradnju prometnica",
-    property: "Određivanje točke razmekšanja postupkom prstena i kuglice",
-    test_method: "HRN EN 1427:2015 (EN 1427:2015)",
+    property: "Određivanje modula stišljivosti metodom kružne ploče",
+    test_method: "HRN U.B1.046:1968",
   },
   {
     materials: "Nevezane i hidrauličkim vezivom vezane mješavine",
-    property: "Određivanje modula stišljivosti metodom kružne ploče",
-    test_method: "HRN U.B1.046:1968",
+    property: "Mjerenje dinamičkog deformacijskog modula ugrađenih mješavina",
+    test_method: "TSC 06.720:2003, (točka 4.2.3., 5.2.2.2., 5.2.3.2., 6.2.2)",
   },
   {
     materials: "Nevezane i hidrauličkim vezivom vezane mješavine",
