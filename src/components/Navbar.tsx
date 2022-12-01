@@ -52,10 +52,6 @@ const Navbar = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
-  // useEffect=(()=>{
-  //   addEventListener("mousemove", (event) => {});
-  //   onmousemove = (event) => {setMouseMoved(true)};
-  // },[mouseMoved])
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
