@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import UpperHexagons from "../components/UpperHexagons";
 import { useState, useEffect, CSSProperties } from "react";
 import { useDispatch } from "react-redux";
