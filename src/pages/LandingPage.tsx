@@ -1,5 +1,8 @@
 import UpperHexagons from "../components/UpperHexagons";
 import { useState, useEffect, CSSProperties } from "react";
+import { useDispatch } from "react-redux";
+import { actionCreators } from "../state";
+import { bindActionCreators } from "redux";
 import HashLoader from "react-spinners/HashLoader";
 import styled from "styled-components";
 import { State } from "../state/reducers";
@@ -13,11 +16,14 @@ const override: CSSProperties = {
 const LandingPage = () => {
   const counter = useSelector((state: State) => state.navigation);
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+  const { increaseCount } = bindActionCreators(actionCreators, dispatch);
   const color = "#5D6472 ";
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
+      increaseCount(122);
     }, 1950);
   }, []);
   if (loading && counter < 2) {
