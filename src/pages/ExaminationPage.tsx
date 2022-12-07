@@ -22,7 +22,7 @@ const data: Testings[] = [
   {
     materials: "Nevezane i hidrauličkim vezivom vezane mješavine",
     property: "Mjerenje dinamičkog deformacijskog modula ugrađenih mješavina",
-    test_method: "TSC 06.720:2003, (točka 4.2.3., 5.2.2.2., 5.2.3.2., 6.2.2)",
+    test_method: "TSC 06.720:2003, (Točka 4.2.3., 5.2.2.2., 5.2.3.2., 6.2.2)",
   },
   {
     materials: "Nevezane i hidrauličkim vezivom vezane mješavine",
