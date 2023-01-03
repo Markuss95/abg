@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import UpperHexagons from "../components/UpperHexagons";
 import { useState, useEffect, CSSProperties } from "react";
+import { Helmet } from "react-helmet-async";
 import { useDispatch } from "react-redux";
 import { actionCreators } from "../state";
 import { bindActionCreators } from "redux";
@@ -30,6 +31,10 @@ const LandingPage = () => {
   if (loading && counter < 2) {
     return (
       <Drapper>
+        <Helmet>
+          <title>ABG Test</title>
+          <meta name="description" content="Službena stranica" />
+        </Helmet>
         <HashLoader
           color={color}
           loading={loading}
@@ -43,6 +48,10 @@ const LandingPage = () => {
   } else {
     return (
       <Wrapper>
+        <Helmet>
+          <title>ABG Test</title>
+          <meta name="description" content="Službena stranica" />
+        </Helmet>
         <UpperHexagons />
       </Wrapper>
     );

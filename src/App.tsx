@@ -1,5 +1,6 @@
 import "./App.css";
 import { AnimatePresence } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
@@ -12,8 +13,9 @@ import ConcretePage from "./pages/ConcretePage";
 import ExaminationPage from "./pages/ExaminationPage";
 
 const App = () => {
+  const helmetContext = {};
   return (
-    <>
+    <HelmetProvider context={helmetContext}>
       <Navbar />
       <AnimatePresence>
         <Routes>
@@ -27,7 +29,7 @@ const App = () => {
           <Route path="examinations" element={<ExaminationPage />} />
         </Routes>
       </AnimatePresence>
-    </>
+    </HelmetProvider>
   );
 };
 
